@@ -60,8 +60,7 @@ v1.0 :
 
 1) creation d'un trello pour l'organisation : https://trello.com/b/9JVvOPKb/getflix
 2) Choix du nom de site
-3) maquettage via figma
-
+3) maquettage via papier et crayon
 
 
 
