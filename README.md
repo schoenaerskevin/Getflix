@@ -26,10 +26,11 @@ Déjà inclus dans les fichiers de base.
 ## Team
 
 Réalisation :En equipe de 4 
-membre de la team (et lien vers la page perso de chaque membre)
-Laurent Lonchay : https://github.com/LaurentLonchay
-Sebastien Meunier : https://github.com/MeunierS/
-Olivier Peeters : https://github.com/OlivierPeeters73
+ membre de la team (et lien vers la page perso de chaque membre)  
++ Laurent Lonchay : https://github.com/LaurentLonchay  
++ Sebastien Meunier : https://github.com/MeunierS/  
++ Olivier Peeters : https://github.com/OlivierPeeters73  
++ Kevin Schoenaers : https://github.com/schoenaerskevin
 
 ## Liens vers la page  
 
@@ -49,7 +50,7 @@ v1.0 :
 
 ## Poste occupé durant la Réalisation
 
-+ Junior Web Dev chez Becode
++ Junior Web Dev chez Becode  
 + Laurent : Maquettage
 + Olivier : trouver l'hébergeur 
 + Sebastien : project manager et trouver Api film 
