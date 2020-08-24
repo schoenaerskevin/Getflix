@@ -58,7 +58,7 @@ v1.0 :
 
 ## Approche
 
-1) creation d'un trello pour l'organisation
+1) creation d'un trello pour l'organisation : https://trello.com/b/9JVvOPKb/getflix
 2) maquettage via figma
 
 
