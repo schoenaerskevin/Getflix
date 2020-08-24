@@ -3,9 +3,9 @@
 
 ## Introduction
 
-Vous trouverez ici un projet qui avait pour but de renforcer nos connaissance dans l'usage du language PHP et Mysql.
-Afin de réliser ce projet il nous a été demandé de realiser un site web representant une plateforme de streaming tel que Netflix, Amazon video.
-Durée approximative du projets 10 jours 
+Vous trouverez ici un projet qui avait pour but de renforcer nos connaissance dans l'usage du language PHP et Mysql.  
+Afin d'implémenter ce projet il nous a été demandé de réaliser un site web représentant une plateforme de streaming tel que Netflix, Amazon video mais sur le thème du jeu vidéo.  
+Durée approximative du projet 10 jours.
 
 Il s'agit d'un excercice réalisé durant la formation chez BeCode de Junior Web Dev.  
 
