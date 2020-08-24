@@ -1,4 +1,4 @@
-# Getflix
+# Streamler
 
 
 ## Introduction
@@ -51,15 +51,16 @@ v1.0 :
 ## Poste occupé durant la Réalisation
 
 + Junior Web Dev chez Becode  
-+ Laurent : Maquettage
-+ Olivier : trouver l'hébergeur 
-+ Sebastien : project manager et trouver Api film 
-+ Kevin : Realisation du readme et git master via pull request 
++ Laurent : Codeur
++ Olivier :  Codeur
++ Sebastien : Project Manager & Codeur
++ Kevin : Git master via pull request & Codeur
 
 ## Approche
 
 1) creation d'un trello pour l'organisation : https://trello.com/b/9JVvOPKb/getflix
-2) maquettage via figma
+2) Choix du nom de site
+3) maquettage via figma
 
 
 
