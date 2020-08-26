@@ -8,10 +8,18 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/svg" href="assets/img/gamepad.svg">
+       <style>
+
+        body{
+  background-color:#343a40;
+  color:white;
+}
+        </style>
         <title>STREAMLER.COM</title>
 </head>
 
-<body style=" background-color:#343a40">
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a style="font-family: 'Londrina Shadow', cursive; font-size:3em" class="navbar-brand" href="#">STREAMLER.COM <i class="fa fa-gamepad" style="font-size:1em"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,9 +30,6 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Top 10 Games <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Comming Out Soon <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Most Popular <span class="sr-only">(current)</span></a>
@@ -38,13 +43,16 @@
           <a class="dropdown-item" href="#">Adventure</a>
           <a class="dropdown-item" href="#">Arcade</a>
           <a class="dropdown-item" href="#">Indie</a>
+          <a class="dropdown-item" href="#">Fighting</a>
           <a class="dropdown-item" href="#">FPS</a>
           <a class="dropdown-item" href="#">Platform</a>
           <a class="dropdown-item" href="#">Puzzle</a>
+          <a class="dropdown-item" href="#">Racing</a>
           <a class="dropdown-item" href="#">RPG</a>
           <a class="dropdown-item" href="#">Simulation</a>
           <a class="dropdown-item" href="#">Sports</a>
           <a class="dropdown-item" href="#">Strategy</a>
+          <a class="dropdown-item" href="#">Tactical</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -54,7 +62,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">PC (Windows)</a>
           <a class="dropdown-item" href="#">Playstation 4</a>
-          <a class="dropdown-item" href="#">Xbox One</a>
+          <a class="dropdown-item" href="#">Xbox</a>
           <a class="dropdown-item" href="#">Nintendo Switch</a>
           <a class="dropdown-item" href="#">Mac OSx</a>
         </div>
@@ -63,19 +71,19 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-primary" type="submit">Search</button>
-      <a class="btn btn-primary" href="#" role="button">Log In</a>
+      <a class="btn btn-outline-primary" href="#" role="button">Log In</a>
+      <a class="btn btn-outline-primary" href="#" role="button">Sign Up</a>
     </form>
   </div>
 </nav>
 
 
 <footer class="page-footer font-small special-color-dark fixed-bottom">
-
+        <a class="btn btn-outline-primary pull-left" href="index.php" onclick="myfunction()" role="button">Dark/Light Mode</a>
         <div class="footer-copyright py-2 text-center">© 2020 Copyright:
         <a href="#"> streamler.com</a>
-
+        <a class="btn btn-outline-primary pull-right" href="admin.php" role="button">Admin</a>
 </footer>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
