@@ -5,14 +5,11 @@
      *Si l'id de session n'existe  pas, session_id() rnevoie une chaine
      *de caractères vide*/
     $id_session = session_id();
-    $bdd = new PDO('mysql:host=database;dbname=espace_membre', 'root', 'root');
+    $bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
 
 
    //  if(isset($_GET['id']) AND $_GET['id'] > 0) {
-      $getid = intval($_GET['id']);
-      $requser = $bdd->prepare('SELECT * FROM membres WHERE id = ?');
-      $requser->execute(array($getid));
-      $userinfo = $requser->fetch();
+     
       echo $_SESSION['pseudo'];
 ?>
 
@@ -89,19 +86,15 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-primary" type="submit">Search</button>
-<<<<<<< HEAD
-      <a class="btn btn-primary" href="connexion.php" role="button">Log In</a>
-=======
-      <a class="btn btn-outline-primary" href="#" role="button">Log In</a>
-      <a class="btn btn-outline-primary" href="#" role="button">Sign Up</a>
->>>>>>> 74e0234c4916965788aac58014b058db27c38cd4
+      <a class="btn btn-outline-primary" href="connexion.php" role="button">Log In</a>
+      <a class="btn btn-outline-primary" href="inscription.php" role="button">Sign Up</a>
     </form>
   </div>
 </nav>
 
 
 <footer class="page-footer font-small special-color-dark fixed-bottom">
-        <a class="btn btn-outline-primary pull-left" href="index.php" onclick="myfunction()" role="button">Dark/Light Mode</a>
+        
         <div class="footer-copyright py-2 text-center">© 2020 Copyright:
         <a href="#"> streamler.com</a>
         <a class="btn btn-outline-primary pull-right" href="admin.php" role="button">Admin</a>

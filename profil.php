@@ -3,11 +3,11 @@ session_start();
 
 
  
-$bdd = new PDO('mysql:host=database;dbname=espace_membre', 'root', 'root');
+$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
  
 if(isset($_GET['id']) AND $_GET['id'] > 0) {
    $getid = intval($_GET['id']);
-   $requser = $bdd->prepare('SELECT * FROM membres WHERE id = ?');
+   $requser = $bdd->prepare('SELECT * FROM user WHERE id = ?');
    $requser->execute(array($getid));
    $userinfo = $requser->fetch();
 ?>
@@ -30,6 +30,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
          <br />
          <a href="editionprofil.php">Editer mon profil</a>
          <a href="deconnexion.php">Se déconnecter</a>
+         <a href="menu.php">menu</a>
          <?php
          }
          ?>

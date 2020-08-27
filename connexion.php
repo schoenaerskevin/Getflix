@@ -7,8 +7,11 @@ if(isset($_POST['formconnexion'])) {
    $mailconnect = htmlspecialchars($_POST['mailconnect']);
    $mdpconnect = sha1($_POST['mdpconnect']);
    if(!empty($mailconnect) AND !empty($mdpconnect)) {
-      $requser = $bdd->prepare("SELECT * FROM membres WHERE mail = ? AND motdepasse = ?");
-      $requser->execute(array($mailconnect, $mdpconnect));
+      $requser = $bdd->prepare("SELECT * FROM user WHERE mail = ? ");
+      $requser->execute(array($mailconnect));
+      $requser1 = $bdd->prepare("SELECT * FROM mdp WHERE mdp = ? ");
+      $requser1->execute(array( $mdpconnect));
+      
       $userexist = $requser->rowCount();
       if($userexist == 1) {
          $userinfo = $requser->fetch();
