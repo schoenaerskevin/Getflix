@@ -5,7 +5,10 @@
      *Si l'id de session n'existe  pas, session_id() rnevoie une chaine
      *de caractères vide*/
     $id_session = session_id();
+
     $bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
+    //$bdd = new PDO('mysql:host=127.0.0.1;dbname=streamler', 'root', 'root');
+
 
 
    //  if(isset($_GET['id']) AND $_GET['id'] > 0) {
