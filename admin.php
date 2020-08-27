@@ -1,5 +1,7 @@
 <?php
+//link base de donné
 $bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
+//permet a l'admin de valider ou supprimer un membre 
 if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
    if(isset($_GET['confirme']) AND !empty($_GET['confirme'])) {
       $confirme = (int) $_GET['confirme'];
@@ -11,6 +13,7 @@ if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
       $req = $bdd->prepare('DELETE FROM membres WHERE id = ?');
       $req->execute(array($supprime));
    }
+   //permet de valider ou supprimer un message 
 } elseif(isset($_GET['type']) AND $_GET['type'] == 'commentaire') {
    if(isset($_GET['approuve']) AND !empty($_GET['approuve'])) {
       $approuve = (int) $_GET['approuve'];
@@ -23,6 +26,7 @@ if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
       $req->execute(array($supprime));
    }
 }
+//requete pour afficher les 5 dernier membre et message
 $membres = $bdd->query('SELECT * FROM membres ORDER BY id DESC LIMIT 0,5');
 $commentaires = $bdd->query('SELECT * FROM chat ORDER BY id DESC LIMIT 0,5');
 ?>

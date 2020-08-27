@@ -1,7 +1,8 @@
 <?php
 session_start();
+//link bdd
 $bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
- 
+ //definition variable
 if(isset($_POST['forminscription'])) {
    $pseudo = htmlspecialchars($_POST['pseudo']);
    $mail = htmlspecialchars($_POST['mail']);
@@ -20,12 +21,13 @@ if(isset($_POST['forminscription'])) {
                $mailexist = $reqmail->rowCount();
                if($mailexist == 0) {
                   if($mdp == $mdp2) {
+                     //inscrit mdp table mdp
                      $insertmbr1 = $bdd->prepare("INSERT INTO mdp(mdp) VALUES(?)");
                      $insertmbr1->execute(array( $mdp));
+                     // inscrit pseudo,mail,droit dans table user
                      $insertmbr2 = $bdd->prepare("INSERT INTO user(pseudo,mail,droit) VALUES(?,?,?)");                     
                      $insertmbr2->execute(array( $pseudo,$mail,$droit));
-                     // $insertmbr3 = $bdd->prepare("INSERT INTO user(mail) VALUES(?)");
-                     // $insertmbr3->execute(array( $mail));
+                     
 
                      $erreur = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";
                   } else {
@@ -47,8 +49,7 @@ if(isset($_POST['forminscription'])) {
       $erreur = "Tous les champs doivent être complétés !";
    }
 }
-var_dump ($insertmbr);
-var_dump ($insertmbra);
+
 
 ?>
 
@@ -58,12 +59,14 @@ var_dump ($insertmbra);
       <meta charset="utf-8">
    </head>
    <body>
+   <!-- formulaire inscription avec pseudo,mail,mdp et type de compte via formulaire-->
       <div align="center">
          <h2>Inscription</h2>
          <br /><br />
          <form method="POST" action="">
             <table>
                <tr>
+               
                   <td align="right">
                      <label for="pseudo">Pseudo :</label>
                   </td>
