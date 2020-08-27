@@ -20,15 +20,14 @@ while ($donnees = $req->fetch())
 ?>
 <div class="image">
     <img src="
-    <?php
-        //img from db
-        echo //htmlspecialchars($donnees['cover']); 
-        'data:image/jpeg;base64,'.base64_encode($image->load())
+        <?php
+                //img from db
+                echo htmlspecialchars('data:image/jpeg;base64,'.base64_encode( $donnees['cover'] )); 
         ?>
         " alt="
         <?php
-        //nom from db
-        echo htmlspecialchars($donnees['nom']); 
+                //nom from db
+                echo htmlspecialchars($donnees['nom']); 
         ?>
         ">
 </div>
