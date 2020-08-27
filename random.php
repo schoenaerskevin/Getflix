@@ -19,7 +19,11 @@ while ($donnees = $req->fetch())
 {
 ?>
 <div class="image">
-    <img src="
+<a href='jeu.php?id="
+<?php //add id to get the rigth jeu.php 
+        echo htmlspecialchars($donnees['id']);
+?>"'>
+<img src="
         <?php
                 //img from db
                 echo htmlspecialchars('data:image/jpeg;base64,'.base64_encode( $donnees['cover'] )); 
@@ -29,7 +33,7 @@ while ($donnees = $req->fetch())
                 //nom from db
                 echo htmlspecialchars($donnees['nom']); 
         ?>
-        ">
+        "></a>
 </div>
 <?php
 } 
