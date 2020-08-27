@@ -1,3 +1,23 @@
+<?php
+try
+{
+  $bdd = new PDO('mysql:host=database;dbname=Streamler;charset=utf8', 'root', 'root');
+  //$bdd = new PDO('mysql:host=127.0.0.1;dbname=Streamler;charset=utf8', 'root', 'root');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+if(isset($_GET['id'])) {
+  $getid = intval($_GET['id']);
+  $reqjeu = $bdd->prepare('SELECT * FROM games WHERE id = ?');
+  $reqjeu->execute(array($getid));
+  $jeuinfo = $reqjeu->fetch();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +33,27 @@
 <div class="container">
   <div class="row">
       <div class="col-4">
-        <H2>TITLE OF THE GAME</H2>
+        <H2><?php echo $jeuinfo['nom']; ?></H2>
         <div>
-            <img src="https://picsum.photos/200/300" alt="photo">
+            
+          <img src="
+          <?php
+                  //img from db
+                  echo htmlspecialchars('data:image/jpeg;base64,'.base64_encode( $jeuinfo['cover'] )); 
+          ?>
+          " alt="
+          <?php
+                  //nom from db
+                  echo htmlspecialchars($jeuinfo['nom']); 
+          ?>
+          ">
+
         </div>
       </div>
       <div class="col-8">
           <br> <br>
       <iframe width="420" height="315"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        src="<?php echo $jeuinfo['trailer']; ?>"allowfullscreen>
         </iframe>
       </div>
   </div>
@@ -29,22 +61,23 @@
   <div class="row">
       <div class="col-4">
         <H4>Genre:</h4>
-        <p>Adventure, Action, Puzzle</p>
+        <p><?php echo $jeuinfo['genre']; ?></p>
         <br>
         <H4>Platforms:</h4>
-        <p>PS4, PC</p>
+        <p><?php echo $jeuinfo['plate-forme']; ?></p>
         <br>
         <H4>Date:</h4>
-        <p>August 25, 2020</p>
+        <p><?php echo $jeuinfo['date-sortie']; ?></p>
       </div>
       <div class="col-8">
         <h4>Synopsis</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum placeat ducimus ut nesciunt illum tenetur quod saepe. Quia velit non minima, at illo minus possimus porro dicta ipsam natus Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam hic deserunt repellendus totam modi? Exercitationem consectetur eaque, ratione minima, quam iste dolore dolores eos, cumque quo sapiente perspiciatis ullam. 
-        <br>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, distinctio. Omnis ad totam eveniet minus qui vel aspernatur, fuga laborum laudantium tempora voluptatem nisi ut ab eaque ullam enim. Vero?</p>
+        <p><?php echo $jeuinfo['synopsis']; ?></p>
       
       </div>
   </div>
 </div>
 </body>
 </html>
+<?php   
+}
+?>
