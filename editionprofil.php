@@ -2,7 +2,7 @@
 session_start();
  
 //link bdd
-$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
+$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
  
 if(isset($_SESSION['id'])) {
    $requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");

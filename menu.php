@@ -4,9 +4,9 @@
     /*On utilise session_id() pour récupérer l'id de session s'il existe.
      *Si l'id de session n'existe  pas, session_id() rnevoie une chaine
      *de caractères vide*/
-    $id_session = session_id();
+    
 
-    $bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
+    $bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
     //$bdd = new PDO('mysql:host=127.0.0.1;dbname=streamler', 'root', 'root');
 
 

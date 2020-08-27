@@ -1,7 +1,7 @@
 <?php
 session_start();
 //link bdd
-$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
+$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
  //definition variable
 if(isset($_POST['forminscription'])) {
    $pseudo = htmlspecialchars($_POST['pseudo']);
@@ -25,8 +25,8 @@ if(isset($_POST['forminscription'])) {
                      $insertmbr1 = $bdd->prepare("INSERT INTO mdp(mdp) VALUES(?)");
                      $insertmbr1->execute(array( $mdp));
                      // inscrit pseudo,mail,droit dans table user
-                     $insertmbr2 = $bdd->prepare("INSERT INTO user(pseudo,mail,droit) VALUES(?,?,?)");                     
-                     $insertmbr2->execute(array( $pseudo,$mail,$droit));
+                     $insertmbr2 = $bdd->prepare("INSERT INTO user(mail,droit,pseudo) VALUES(?,?,?)");                     
+                     $insertmbr2->execute(array($mail,$droit,$pseudo));
                      
 
                      $erreur = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";

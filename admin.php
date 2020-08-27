@@ -1,6 +1,6 @@
 <?php
 //link base de donné
-$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
+$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
 //permet a l'admin de valider ou supprimer un membre 
 if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
    if(isset($_GET['confirme']) AND !empty($_GET['confirme'])) {

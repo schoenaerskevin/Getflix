@@ -1,7 +1,8 @@
 <?php
+session_start();
 try
 {
-  $bdd = new PDO('mysql:host=database;dbname=Streamler;charset=utf8', 'root', 'root');
+  $bdd = new PDO('mysql:host=database;dbname=streamler;charset=utf8', 'root', 'root');
   //$bdd = new PDO('mysql:host=127.0.0.1;dbname=Streamler;charset=utf8', 'root', 'root');
 }
 catch(Exception $e)

@@ -3,7 +3,7 @@
 // Connect to database
 try
 {
-	$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
+	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
 }
 //error
 catch(Exception $e)

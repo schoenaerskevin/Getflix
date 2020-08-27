@@ -1,7 +1,7 @@
 <?php
 session_start();
  //link bdd
-$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
+$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
  //verifie que mail et mdp correspondent a une entree de la bdd
 if(isset($_POST['formconnexion'])) {
    $mailconnect = htmlspecialchars($_POST['mailconnect']);
