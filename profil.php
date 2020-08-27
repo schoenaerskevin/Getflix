@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
  
 $bdd = new PDO('mysql:host=database;dbname=espace_membre', 'root', 'root');
  

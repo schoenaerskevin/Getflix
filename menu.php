@@ -1,3 +1,21 @@
+<?php
+    //On démarre une nouvelle session
+    session_start();
+    /*On utilise session_id() pour récupérer l'id de session s'il existe.
+     *Si l'id de session n'existe  pas, session_id() rnevoie une chaine
+     *de caractères vide*/
+    $id_session = session_id();
+    $bdd = new PDO('mysql:host=database;dbname=espace_membre', 'root', 'root');
+
+
+   //  if(isset($_GET['id']) AND $_GET['id'] > 0) {
+      $getid = intval($_GET['id']);
+      $requser = $bdd->prepare('SELECT * FROM membres WHERE id = ?');
+      $requser->execute(array($getid));
+      $userinfo = $requser->fetch();
+      echo $_SESSION['pseudo'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,7 +81,7 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-primary" type="submit">Search</button>
-      <a class="btn btn-primary" href="#" role="button">Log In</a>
+      <a class="btn btn-primary" href="connexion.php" role="button">Log In</a>
     </form>
   </div>
 </nav>

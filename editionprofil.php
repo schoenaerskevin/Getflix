@@ -2,7 +2,7 @@
 session_start();
  
 
-$bdd = new PDO('mysql:host=database;dbname=espace_membre', 'root', 'root');
+$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
  
 if(isset($_SESSION['id'])) {
    $requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");

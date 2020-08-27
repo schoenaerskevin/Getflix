@@ -1,7 +1,7 @@
 <?php
 session_start();
  
-$bdd = new PDO('mysql:host=database;dbname=espace_membre', 'root', 'root');
+$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
  
 if(isset($_POST['formconnexion'])) {
    $mailconnect = htmlspecialchars($_POST['mailconnect']);

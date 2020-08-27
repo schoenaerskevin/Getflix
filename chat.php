@@ -12,7 +12,7 @@
 // Connect to database
 try
 {
-	$bdd = new PDO('mysql:host=database;dbname=Streamler;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=database;dbname=Streamler', 'root', 'root');
 }
 //error
 catch(Exception $e)
@@ -20,12 +20,12 @@ catch(Exception $e)
         die('Error : '.$e->getMessage());
 }
 // last 20 comments
-$req = $bdd->query('SELECT ID, pseudo, comment FROM Comment ORDER BY ID DESC LIMIT 0, 20');
+$req = $bdd->query('SELECT ID, pseudo, chat FROM chat ORDER BY ID DESC LIMIT 0, 20');
 
 while ($donnees = $req->fetch())
 {
 ?>
-<div class="comment">
+<div class="chat">
     <h3 class="pseudochat">
         <?php
         //pseudo from db
@@ -35,7 +35,7 @@ while ($donnees = $req->fetch())
     <p class="chat">
     <?php
     //comment from db
-    echo nl2br(htmlspecialchars($donnees['comment']));
+    echo nl2br(htmlspecialchars($donnees['chat']));
     ?>
     </p>
 </div>
