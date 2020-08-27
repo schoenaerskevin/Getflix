@@ -45,7 +45,8 @@ v1.0 :
 ## Historique
 
 + 24/08/2020  : création du readme, mise en place de la to do list via "trello, maquettage,bdd film via api et trouver un hebergeur gratuit supportant le php
-+ 
++ 25/08/2020  : plan du  site et et maquettage  base de donnée, uniformisation de la structure de la base de donnée, implémentation du random,creation fichier jeu.php
++26/08/2020   : resolution affichage random, resolution inscription via plusieurs table dans la base de données 
 
 
 ## Poste occupé durant la Réalisation
@@ -61,6 +62,9 @@ v1.0 :
 1) creation d'un trello pour l'organisation : https://trello.com/b/9JVvOPKb/getflix
 2) Choix du nom de site
 3) maquettage via balsamiq 3 
+4)plan de site 
+5)maquettage base de donnée
+6)
 
 
 
