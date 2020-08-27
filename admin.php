@@ -1,6 +1,14 @@
 <?php
 //link base de donné
-$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+try
+{
+	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+}
+//error
+catch(Exception $e)
+{
+        die('Error : '.$e->getMessage());
+}
 //permet a l'admin de valider ou supprimer un membre 
 if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
    if(isset($_GET['confirme']) AND !empty($_GET['confirme'])) {
@@ -37,21 +45,18 @@ $commentaires = $bdd->query('SELECT * FROM chat ORDER BY id DESC LIMIT 0,5');
    <title>Administration</title>
 </head>
 <body>
-   <ul>
+<ul>
       <?php while($m = $membres->fetch()) { ?>
-      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?><?php if($m['confirme'] == 0) { ?> - <<button type="button"<?= $m['id'] ?>>Confirmer</button><?php } ?> - <<button type="button"<?= $m['id'] ?>>Supprimer</button></li>
+      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?><?php if($m['confirme'] == 0) { ?> - <a href="index.php?type=membre&confirme=<?= $m['id'] ?>">Confirmer</a><?php } ?> - <a href="index.php?type=membre&supprime=<?= $m['id'] ?>">Supprimer</a></li>
       <?php } ?>
    </ul>
    <br /><br />
    <ul>
       <?php while($c = $commentaires->fetch()) { ?>
-      <li><?= $c['id'] ?> : <?= $c['chat'] ?> : <?= $c['contenu'] ?><?php if($c['approuve'] == 0) { ?> - <a href="index.php?type=chat&approuve=<?= $c['id'] ?>">Approuver</a><?php } ?> - <a href="index.php?type=commentaire&supprime=<?= $c['id'] ?>">Supprimer</a></li>
+      <li><?= $c['id'] ?> : <?= $c['pseudo'] ?> : <?= $c['contenu'] ?><?php if($c['approuve'] == 0) { ?> - <a href="index.php?type=commentaire&approuve=<?= $c['id'] ?>">Approuver</a><?php } ?> - <a href="index.php?type=commentaire&supprime=<?= $c['id'] ?>">Supprimer</a></li>
       <?php } ?>
    </ul>
 </body>
 </html>
 
-      <?php } ?>
-   </ul>
-</body>
-</html>
+     

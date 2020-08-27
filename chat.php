@@ -1,9 +1,14 @@
+<?php 
+
+session_start();
+echo $_SESSION['pseudo'];
+?>
+
 <!--form to add message to chat-->
-<form method="POST" action="chatpost.php" class="form-group"> 
-<label for="pseudo">pseudo</label>
-<input type="text" name="pseudo" class="form-control">
-<label for="chat">Text</label>
-<input type="text" name="chat" class="form-control">
+<form method="POST" action="" class="form-group"> 
+
+<label for="comment">Text</label>
+<input type="text" name="comment" class="form-control">
 <input class="btn btn-primary" type="submit" name="submit" value="Post">
 </form> 
 
@@ -19,8 +24,23 @@ catch(Exception $e)
 {
         die('Error : '.$e->getMessage());
 }
+
+//treatment of form of chat.php
+if (isset($_POST['submit'])){   
+    //if (isset($_SESSION['pseudo'])){
+        if (isset($_POST['comment'])){
+            // Insert chat into db
+            
+            $req = $bdd->prepare('INSERT INTO chat (pseudo, comment) VALUES(?, ?)');
+            $req->execute(array($_SESSION['pseudo'], $_POST['comment']));
+            
+            
+            
+        }
+   // }
+}
 // last 20 comments
-$req = $bdd->query('SELECT ID, pseudo, chat FROM chat ORDER BY ID DESC LIMIT 0, 20');
+$req = $bdd->query('SELECT id, pseudo, comment FROM chat ORDER BY id DESC LIMIT 0, 20');
 
 while ($donnees = $req->fetch())
 {
@@ -35,7 +55,7 @@ while ($donnees = $req->fetch())
     <p class="chat">
     <?php
     //comment from db
-    echo nl2br(htmlspecialchars($donnees['chat']));
+    echo nl2br(htmlspecialchars($donnees['comment']));
     ?>
     </p>
 </div>
@@ -43,5 +63,7 @@ while ($donnees = $req->fetch())
 } 
 // end while for comment
 $req->closeCursor();
+
+
 ?>
 

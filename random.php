@@ -4,7 +4,7 @@
 // Connect to database
 try
 {
-	$bdd = new PDO('mysql:host=database;dbname=Streamler;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=database;dbname=streamler;charset=utf8', 'root', 'root');
 }
 //error
 catch(Exception $e)
@@ -19,10 +19,10 @@ while ($donnees = $req->fetch())
 {
 ?>
 <div class="image">
-<a href='jeu.php?id="
+<a href='jeu.php?id=
 <?php //add id to get the rigth jeu.php 
         echo htmlspecialchars($donnees['id']);
-?>"'>
+?>'>
 <img src="
         <?php
                 //img from db

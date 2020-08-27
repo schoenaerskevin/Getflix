@@ -6,7 +6,15 @@
      *de caractères vide*/
     
 
-    $bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+    try
+{
+	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+}
+//error
+catch(Exception $e)
+{
+        die('Error : '.$e->getMessage());
+}
     //$bdd = new PDO('mysql:host=127.0.0.1;dbname=streamler', 'root', 'root');
 
 

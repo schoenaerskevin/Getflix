@@ -2,8 +2,17 @@
 session_start();
 
 
+
  
-$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+try
+{
+	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+}
+//error
+catch(Exception $e)
+{
+        die('Error : '.$e->getMessage());
+}
  
 if(isset($_GET['id']) AND $_GET['id'] > 0) {
    $getid = intval($_GET['id']);

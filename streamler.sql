@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 27 août 2020 à 10:00
--- Version du serveur :  5.7.31
--- Version de PHP : 7.3.21
+-- Host: database:3306
+-- Generation Time: Aug 27, 2020 at 02:18 PM
+-- Server version: 10.4.2-MariaDB-1:10.4.2+maria~bionic
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,62 +19,40 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `streamler`
+-- Database: `streamler`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `chat`
+-- Table structure for table `chat`
 --
 
-DROP TABLE IF EXISTS `chat`;
-CREATE TABLE IF NOT EXISTS `chat` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `comment` text NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `ID` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
-
---
--- Déchargement des données de la table `chat`
---
-
-INSERT INTO `chat` (`ID`, `comment`) VALUES
-(1, 'ce ci est un comment de test'),
-(2, 'ce ci est un autre truc detest'),
-(4, 'blabla'),
-(5, 'wouf'),
-(7, 'wouf'),
-(8, 'miam'),
-(11, 'je test'),
-(12, 'grrrrrr'),
-(14, 'psptsptsptpstpt'),
-(16, 'bloup bloup'),
-(17, 'meuh'),
-(18, 'cela fonctionne');
+CREATE TABLE `chat` (
+  `id` int(11) NOT NULL,
+  `pseudo` varchar(255) NOT NULL,
+  `comment` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `games`
+-- Table structure for table `games`
 --
 
-DROP TABLE IF EXISTS `games`;
-CREATE TABLE IF NOT EXISTS `games` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `games` (
+  `id` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `genre` varchar(255) NOT NULL,
   `plate-forme` varchar(255) NOT NULL,
   `date-sortie` date NOT NULL,
   `trailer` varchar(255) NOT NULL,
   `cover` blob NOT NULL,
-  `synopsis` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+  `synopsis` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `games`
+-- Dumping data for table `games`
 --
 
 INSERT INTO `games` (`id`, `nom`, `genre`, `plate-forme`, `date-sortie`, `trailer`, `cover`, `synopsis`) VALUES
@@ -146,29 +125,99 @@ INSERT INTO `games` (`id`, `nom`, `genre`, `plate-forme`, `date-sortie`, `traile
 -- --------------------------------------------------------
 
 --
--- Structure de la table `mdp`
+-- Table structure for table `mdp`
 --
 
-DROP TABLE IF EXISTS `mdp`;
-CREATE TABLE IF NOT EXISTS `mdp` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `mdp` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE `mdp` (
+  `id` int(11) NOT NULL,
+  `mdp` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `mdp`
+--
+
+INSERT INTO `mdp` (`id`, `mdp`) VALUES
+(3, 'de271790913ea81742b7d31a70d85f50a3d3e5ae'),
+(4, 'de271790913ea81742b7d31a70d85f50a3d3e5ae');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
   `mail` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
-  `status` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
-  KEY `ID` (`id`)
+  `droit` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+  `pseudo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `mail`, `droit`, `pseudo`) VALUES
+(1, 'schoenaerskevin@gmail.com', 'free', 'kef'),
+(2, 'seb@seb.be', 'free', 'seb');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ID` (`id`);
+
+--
+-- Indexes for table `games`
+--
+ALTER TABLE `games`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mdp`
+--
+ALTER TABLE `mdp`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD KEY `ID` (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `games`
+--
+ALTER TABLE `games`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `mdp`
+--
+ALTER TABLE `mdp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

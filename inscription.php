@@ -1,7 +1,15 @@
 <?php
 session_start();
 //link bdd
-$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+try
+{
+	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+}
+//error
+catch(Exception $e)
+{
+        die('Error : '.$e->getMessage());
+}
  //definition variable
 if(isset($_POST['forminscription'])) {
    $pseudo = htmlspecialchars($_POST['pseudo']);
