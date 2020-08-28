@@ -1,5 +1,7 @@
 <?php
+	session_start();
 
+	$id_session = session_id();
 // * done by Seb
 // Connect to database
 try
@@ -12,13 +14,29 @@ catch(Exception $e)
         die('Error : '.$e->getMessage());
 }
 
-// 10 random games
-$req = $bdd->query('SELECT * FROM games ORDER BY RAND() LIMIT 10');
+// 12 random games
+$req = $bdd->query('SELECT * FROM games ORDER BY RAND() LIMIT 12');
+?>
 
+ <!DOCTYPE html>
+ <html lang="fr">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>STREAMLER.COM</title>
+ </head>
+ <body>
+   <?php 
+        include 'menu.php';
+
+ 	 ?>
+
+<div class="container">
+<div class="row">
+<?php
 while ($donnees = $req->fetch())
 {
 ?>
-<div class="image">
+<div class="col-sm-12 col-md-6 col-lg-3">
 <a href='jeu.php?id=
 <?php //add id to get the rigth jeu.php 
         echo htmlspecialchars($donnees['id']);
@@ -40,3 +58,11 @@ while ($donnees = $req->fetch())
 // end while for comment
 $req->closeCursor();
 ?>
+</div>
+</div>
+<?php 
+      include 'chat.php';
+
+ 	 ?>
+</body>
+ </html>
