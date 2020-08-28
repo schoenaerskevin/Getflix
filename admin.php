@@ -1,5 +1,6 @@
 <?php
 //link base de donné
+session_start();
 try
 {
 	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
@@ -34,9 +35,9 @@ if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
       $req->execute(array($supprime));
    }
 }
-//requete pour afficher les 5 dernier membre et message
-$membres = $bdd->query('SELECT * FROM membres ORDER BY id DESC LIMIT 0,5');
-$commentaires = $bdd->query('SELECT * FROM chat ORDER BY id DESC LIMIT 0,5');
+//requete pour afficher les  membres et messages
+$membres = $bdd->query('SELECT * FROM user ORDER BY id ');
+$commentaires = $bdd->query('SELECT * FROM chat ORDER BY id ');
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,15 +46,16 @@ $commentaires = $bdd->query('SELECT * FROM chat ORDER BY id DESC LIMIT 0,5');
    <title>Administration</title>
 </head>
 <body>
+<?php include 'menu.php';?>
 <ul>
       <?php while($m = $membres->fetch()) { ?>
-      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?><?php if($m['confirme'] == 0) { ?> - <a href="index.php?type=membre&confirme=<?= $m['id'] ?>">Confirmer</a><?php } ?> - <a href="index.php?type=membre&supprime=<?= $m['id'] ?>">Supprimer</a></li>
+      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Supprimer</a></li>
       <?php } ?>
    </ul>
    <br /><br />
    <ul>
       <?php while($c = $commentaires->fetch()) { ?>
-      <li><?= $c['id'] ?> : <?= $c['pseudo'] ?> : <?= $c['contenu'] ?><?php if($c['approuve'] == 0) { ?> - <a href="index.php?type=commentaire&approuve=<?= $c['id'] ?>">Approuver</a><?php } ?> - <a href="index.php?type=commentaire&supprime=<?= $c['id'] ?>">Supprimer</a></li>
+      <li><?= $c['pseudo'] ?> : <?= $c['comment'] ?> :  - <a href="delchat.php?id=<?= $c['id'] ?>">Supprimer</a></li>
       <?php } ?>
    </ul>
 </body>

@@ -1,13 +1,13 @@
 <?php 
 
 session_start();
-echo $_SESSION['pseudo'];
+
 ?>
 
 <!--form to add message to chat-->
 <form method="POST" action="" class="form-group"> 
 
-<label for="comment">Text</label>
+<label for="comment"><H2>Chat</H2></label>
 <input type="text" name="comment" class="form-control">
 <input class="btn btn-primary" type="submit" name="submit" value="Post">
 </form> 

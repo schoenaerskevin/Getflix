@@ -18,7 +18,9 @@
  <body>
    <?php 
     	include 'menu.php';
- 		include 'home.php';
+      include 'home.php';
+      include 'chat.php';
+
  	 ?>
  </body>
  </html>
