@@ -19,7 +19,7 @@ if(isset($_POST['forminscription'])) {
    $mdp2 = sha1($_POST['mdp2']);
    $droit = htmlspecialchars($_POST['droit']);
    
-   if(!empty($_POST['pseudo']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) {
+   if(!empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['mail2']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])&& !empty($_POST['droit']) ) {
       $pseudolength = strlen($pseudo);
       if($pseudolength <= 255) {
          if($mail == $mail2) {
@@ -29,6 +29,7 @@ if(isset($_POST['forminscription'])) {
                $mailexist = $reqmail->rowCount();
                if($mailexist == 0) {
                   if($mdp == $mdp2) {
+                     
                      //inscrit mdp table mdp
                      $insertmbr1 = $bdd->prepare("INSERT INTO mdp(mdp) VALUES(?)");
                      $insertmbr1->execute(array( $mdp));
