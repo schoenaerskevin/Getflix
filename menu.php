@@ -99,6 +99,7 @@ catch(Exception $e)
       <button class="btn btn-outline-primary" type="submit">Search</button>
       <a class="btn btn-outline-primary" href="connexion.php" role="button">Log In</a>
       <a class="btn btn-outline-primary" href="inscription.php" role="button">Sign Up</a>
+      <a class="btn btn-outline-primary" href="profil.php" role="button">profil</a>
     </form>
   </div>
 </nav>

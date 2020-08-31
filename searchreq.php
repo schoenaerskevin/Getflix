@@ -18,6 +18,8 @@ if(isset($_GET['search']) AND !empty($_GET['search'])) {
    $req = $bdd->query('SELECT * FROM games WHERE nom LIKE "%'.$q.'%" ORDER BY nom DESC');
 
 }
+
+
 ?>
 <!DOCTYPE html>
  <html lang="fr">
@@ -30,7 +32,7 @@ if(isset($_GET['search']) AND !empty($_GET['search'])) {
         include 'menu.php';
 
  	 ?>
-//* renvoie la page dynamique en fonction de la recherche
+ <!-- renvoie la page dynamique en fonction de la recherche -->
 <?php while($donnees = $req->fetch()) { ?>
       
       <a href='jeu.php?id=

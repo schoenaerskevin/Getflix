@@ -57,7 +57,7 @@ $jeux = $bdd->query('SELECT * FROM games ORDER BY nom ');
    <br /><br />
    <ul>
       <?php while($c = $commentaires->fetch()) { ?>
-      <li><?= $c['pseudo'] ?> : <?= $c['comment'] ?> :  - <a href="delchat.php?id=<?= $c['id'] ?>">Supprimer</a></li>
+      <li><?= $c['pseudo'] ?> : <?= $c['comment'] ?> :   <a href="delchat.php?id=<?= $c['id'] ?>">Supprimer</a></li>
       <?php } ?>
    </ul>
    <ul>

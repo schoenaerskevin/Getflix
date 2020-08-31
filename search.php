@@ -20,7 +20,7 @@ if(isset($_GET['search']) AND !empty($_GET['search'])) {
 
 }
 ?>
-//* creation barre de recherche en html 
+ <!-- creation barre de recherche en html  -->
 
 <form method="GET" action ="searchreq.php">
    <input type="search" name="search" placeholder="Recherche..." />

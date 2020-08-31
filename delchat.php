@@ -21,9 +21,9 @@ catch(Exception $e)
 $delete = $_GET["id"];
 
                      // inscrit pseudo,mail,droit dans table user
-                     $insertmbr5= $bdd->prepare('DELETE from chat where id='.$id);  
-                     $insertmbr5->bindParam(':delete', $delete, PDO::PARAM_INT);                   
-                     $insertmbr5->execute();
+                     $insertmbr15= $bdd->prepare('DELETE from chat where id=:delete');  
+                     $insertmbr15->bindParam(':delete', $delete, PDO::PARAM_INT);                   
+                     $insertmbr15->execute();
                      header("Location: admin.php");
 
 
