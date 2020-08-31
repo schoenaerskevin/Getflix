@@ -63,7 +63,7 @@ $jeux = $bdd->query('SELECT * FROM games ORDER BY nom ');
    <ul>
 
     <?php
-//! function del games non fonctionnel 
+ 
    echo '<FORM method="get" action="delgames.php" ><select name="id">';
          while ($games=$jeux->fetch()) {
           echo '<option value="' . $games["id"] . '">' . $games["nom"] . '</option>';

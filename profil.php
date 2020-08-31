@@ -19,6 +19,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
    $requser = $bdd->prepare('SELECT * FROM user WHERE id = ?');
    $requser->execute(array($getid));
    $userinfo = $requser->fetch();
+   $membres = $bdd->query('SELECT * FROM user ORDER BY id ');
 ?>
 <html>
    <head>
@@ -39,6 +40,9 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
          <br />
          <a href="editionprofil.php">Editer mon profil</a>
          <a href="deconnexion.php">Se déconnecter</a>
+         <?php while($m = $membres->fetch()) { ?>
+      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delherprofil.php?id=<?= $m['id'] ?>">Supprimer</a></li>
+      <?php } ?>
          <a href="menu.php">menu</a>
          <?php
          }
