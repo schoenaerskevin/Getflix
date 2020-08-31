@@ -64,7 +64,7 @@ if(isset($_POST['forminscription'])) {
 
 <html>
    <head>
-      <title>TUTO PHP</title>
+      <title>Inscription</title>
       <meta charset="utf-8">
    </head>
    <body>

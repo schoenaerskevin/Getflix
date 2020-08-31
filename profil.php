@@ -22,7 +22,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 ?>
 <html>
    <head>
-      <title>TUTO PHP</title>
+      <title>Profil</title>
       <meta charset="utf-8">
    </head>
    <body>

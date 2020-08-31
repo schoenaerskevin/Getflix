@@ -19,13 +19,15 @@ catch(Exception $e)
 }
 //* delete user
 $delete = $_GET["id"];
-
+$insertmbr3 = $bdd->prepare('DELETE from mdp where id=:delete');  
+$insertmbr3->bindParam(':delete', $delete, PDO::PARAM_INT);
+                     $insertmbr3->execute();
                      // inscrit pseudo,mail,droit dans table user
-                     $insertmbr5= $bdd->prepare('DELETE from chat where id='.$id);  
-                     $insertmbr5->bindParam(':delete', $delete, PDO::PARAM_INT);                   
-                     $insertmbr5->execute();
+                     $insertmbr4= $bdd->prepare('DELETE from games where id=:delete');  
+                     $insertmbr4->bindParam(':delete', $delete, PDO::PARAM_INT);                   
+                     $insertmbr4->execute();
                      header("Location: admin.php");
 
-
+                     
 
 ?>
