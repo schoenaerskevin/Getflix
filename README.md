@@ -47,7 +47,9 @@ v1.0 :
 + 24/08/2020  : création du readme, mise en place de la to do list via "trello, maquettage,bdd film via api et trouver un hebergeur gratuit supportant le php
 + 25/08/2020  : plan du  site et et maquettage  base de donnée, uniformisation de la structure de la base de donnée, implémentation du random,creation fichier jeu.php
 + 26/08/2020   : resolution affichage random, resolution inscription via plusieurs table dans la base de données 
-
++ 27/08/2020 : début home.php, finalisation deconnexion.php, lier table utilisateur et mot de passe,
++ 28/08/2020 : jeu.php terminer, random.php terminer, back office admin,
++ 31/08/2020 : terminer chat,admin, suppresion profil utilisateur, droit session
 
 ## Poste occupé durant la Réalisation
 
