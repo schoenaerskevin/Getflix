@@ -19,6 +19,7 @@ if(isset($_POST['forminscription'])) {
    $mdp2 = sha1($_POST['mdp2']);
    $droit = htmlspecialchars($_POST['droit']);
    
+   
    if(!empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['mail2']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])&& !empty($_POST['droit']) ) {
       $pseudolength = strlen($pseudo);
       if($pseudolength <= 255) {
@@ -26,19 +27,26 @@ if(isset($_POST['forminscription'])) {
             if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
                $reqmail = $bdd->prepare("SELECT * FROM user WHERE mail = ?");
                $reqmail->execute(array($mail));
+               $reqpseudo = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
+               $reqpseudo->execute(array($pseudo));
                $mailexist = $reqmail->rowCount();
                if($mailexist == 0) {
                   if($mdp == $mdp2) {
+                     $pseudoexist = $reqpseudo->rowCount();
+                      if($pseudoexist== 0){
                      
                      //inscrit mdp table mdp
                      $insertmbr1 = $bdd->prepare("INSERT INTO mdp(mdp) VALUES(?)");
                      $insertmbr1->execute(array( $mdp));
                      // inscrit pseudo,mail,droit dans table user
-                     $insertmbr2 = $bdd->prepare("INSERT INTO user(mail,droit,pseudo) VALUES(?,?,?)");                     
-                     $insertmbr2->execute(array($mail,$droit,$pseudo));
+                     $insertmbr2 = $bdd->prepare("INSERT INTO user(pseudo,mail,droit) VALUES(?,?,?)");                     
+                     $insertmbr2->execute(array($pseudo,$mail,$droit));
                      
 
                      $erreur = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";
+                  } else {
+                     $erreur = "nom d'utilisateur deja existant !";
+                  }
                   } else {
                      $erreur = "Vos mots de passes ne correspondent pas !";
                   }
