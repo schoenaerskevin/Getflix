@@ -41,7 +41,7 @@ include 'menu.php';
          <?php while($m = $membres->fetch()) { ?>
       <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delherprofil.php?id=<?= $m['id'] ?>">Supprimer</a></li>
       <?php } ?>
-         <a href="menu.php">menu</a>
+         <a href="index.php">menu</a>
          <?php
          }
          ?>

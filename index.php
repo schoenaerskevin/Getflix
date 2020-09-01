@@ -17,14 +17,15 @@ catch(Exception $e)
         die('Error : '.$e->getMessage());
 }
 
-$req = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
-$req->execute(array($_SESSION['pseudo']));
-$donnees = $req-> fetch();
+//requête du droit de l'user
+$droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
+$droit->execute(array($_SESSION['pseudo']));
+$droituser = $droit-> fetch();
 
 	include 'intro.php';
     	include 'menu.php';
 	  include 'home.php';
-	  if ($donnees['droit']=="premium" || $donnees['droit']=="admin"){
+	  if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
 		  include 'chat.php';
 	}
 	include 'outro.php';

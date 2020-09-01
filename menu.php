@@ -75,7 +75,7 @@ catch(Exception $e)
         include 'search.php';
       ?>
       <?php   
-      if ($donnees['droit']=="premium" || $donnees['droit']=="admin" || $donnees['droit']=="free"){
+      if ($droituser['droit']){
         echo ' <a class="btn btn-outline-primary" href="deconnexion.php" role="button">Log Out</a>';
         }else {
           ;echo '<a class="btn btn-outline-primary" href="connexion.php" role="button">Log In</a>';
@@ -98,7 +98,7 @@ catch(Exception $e)
         <div class="footer-copyright py-2 text-center">© 2020 Copyright:
         <a href="#"> streamler.com</a>
         <?php 
-        if ($donnees['droit']=="admin"){
+        if ($droituser['droit']=="admin"){
         echo '<a class="btn btn-outline-primary pull-right" href="admin.php" role="button">Admin</a>';
         }
         ?>
