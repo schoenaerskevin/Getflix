@@ -17,6 +17,10 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
+//requête du droit de l'user
+$droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
+$droit->execute(array($_SESSION['pseudo']));
+$droituser = $droit-> fetch();
 
 if(isset($_GET['id'])) {
   $getid = intval($_GET['id']);
@@ -26,17 +30,8 @@ if(isset($_GET['id'])) {
 
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/svg" href="assets/img/gamepad.svg">
-</head>
-<body>
-
 <?php
+  include 'intro.php';
       include 'menu.php';
 ?>
 <div class="container">
@@ -85,8 +80,13 @@ if(isset($_GET['id'])) {
       </div>
   </div>
 </div>
-</body>
-</html>
+
 <?php   
 }
 ?>
+<?php
+if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
+      	include 'chat.php';
+  }
+  include 'outro.php';
+	  ?>    

@@ -43,12 +43,10 @@ if(isset($_SESSION['id'])) {
       }
    }
 ?>
-<html>
-   <head>
-      <title>TUTO PHP</title>
-      <meta charset="utf-8">
-   </head>
-   <body>
+<?php 
+include 'intro.php';
+include 'menu.php';
+?>
       <div align="center">
          <h2>Edition de mon profil</h2>
          <div align="left">
@@ -66,11 +64,13 @@ if(isset($_SESSION['id'])) {
             <?php if(isset($msg)) { echo $msg; } ?>
          </div>
       </div>
-   </body>
-</html>
+
 <?php   
 }
 else {
    header("Location: connexion.php");
 }
 ?>
+<?php
+include 'outro.php';
+?> 

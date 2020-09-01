@@ -18,20 +18,17 @@ if(isset($_GET['search']) AND !empty($_GET['search'])) {
    $req = $bdd->query('SELECT * FROM games WHERE nom LIKE "%'.$q.'%" ORDER BY nom DESC');
 
 }
+//requête du droit de l'user
+$droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
+$droit->execute(array($_SESSION['pseudo']));
+$droituser = $droit-> fetch();
 
 
 ?>
-<!DOCTYPE html>
- <html lang="fr">
- <head>
- 	<meta charset="UTF-8">
- 	<title>STREAMLER.COM</title>
- </head>
- <body>
-   <?php 
-        include 'menu.php';
-
- 	 ?>
+<?php 
+include 'intro.php';
+include 'menu.php';
+?>
  <!-- renvoie la page dynamique en fonction de la recherche -->
 <?php while($donnees = $req->fetch()) { ?>
       
@@ -52,6 +49,9 @@ if(isset($_GET['search']) AND !empty($_GET['search'])) {
         "></a>
         
    <?php } ?>
-
-   </body>
- </html>
+   <?php
+   	  if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
+                include 'chat.php';
+      }
+include 'outro.php';
+?> 

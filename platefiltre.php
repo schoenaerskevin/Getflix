@@ -11,6 +11,11 @@ catch(Exception $e)
         die('Error : '.$e->getMessage());
 }
 
+//requête du droit de l'user
+$droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
+$droit->execute(array($_SESSION['pseudo']));
+$droituser = $droit-> fetch();
+
  //* requete +creation variable
 //$req = $bdd->query('SELECT * FROM games ORDER BY nom DESC');
 if(isset($_GET['plateforme']) AND !empty($_GET['plateforme'])) {
@@ -20,15 +25,8 @@ if(isset($_GET['plateforme']) AND !empty($_GET['plateforme'])) {
 }
 
 
-?>
-<!DOCTYPE html>
- <html lang="fr">
- <head>
- 	<meta charset="UTF-8">
- 	<title>STREAMLER.COM</title>
- </head>
- <body>
-   <?php 
+
+   include 'intro.php';
         include 'menu.php';
 
  	 ?>
@@ -51,7 +49,8 @@ if(isset($_GET['plateforme']) AND !empty($_GET['plateforme'])) {
         ?>
         "></a>
         
-   <?php } ?>
-
-   </body>
- </html>
+   <?php } 
+     if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
+        include 'chat.php';
+}
+   include 'outro.php';?>

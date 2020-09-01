@@ -21,12 +21,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
    $userinfo = $requser->fetch();
    $membres = $bdd->query('SELECT * FROM user ORDER BY id ');
 ?>
-<html>
-   <head>
-      <title>Profil</title>
-      <meta charset="utf-8">
-   </head>
-   <body>
+<?php 
+include 'intro.php';
+include 'menu.php';
+?>
       <div align="center">
          <h2>Profil de <?php echo $userinfo['pseudo']; ?></h2>
          <br /><br />
@@ -48,8 +46,9 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
          }
          ?>
       </div>
-   </body>
-</html>
 <?php   
 }
 ?>
+<?php
+include 'outro.php';
+?> 
