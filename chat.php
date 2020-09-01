@@ -39,13 +39,14 @@ if (isset($_POST['submit'])){
         }
    // }
 }
+
 // last 20 comments
 $req = $bdd->query('SELECT id, pseudo, comment FROM chat ORDER BY id DESC LIMIT 0, 20');
 
 while ($donnees = $req->fetch())
 {
 ?>
-<div class="chat">
+<div class="chat" id="chatBox" onload="refreshTimer()">
     <h3 class="pseudochat">
         <?php
         //pseudo from db
