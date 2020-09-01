@@ -70,13 +70,10 @@ if(isset($_POST['forminscription'])) {
 
 ?>
 
-<html>
-   <head>
-      <title>Inscription</title>
-      <meta charset="utf-8">
-   </head>
-   <body>
-   <?php include 'menu.php';?>
+<?php 
+include 'intro.php';
+include 'menu.php';
+?>
    <!-- formulaire inscription avec pseudo,mail,mdp et type de compte via formulaire-->
       <div align="center">
          <h2>Inscription</h2>
@@ -149,5 +146,6 @@ if(isset($_POST['forminscription'])) {
          }
          ?>
       </div>
-   </body>
-</html>
+      <?php
+include 'outro.php';
+?> 

@@ -36,13 +36,10 @@ if(isset($_POST['formconnexion'])) {
    }
 }
 ?>
-<html>
-   <head>
-      <title>TUTO PHP</title>
-      <meta charset="utf-8">
-   </head>
-   <body>
-   <?php include 'menu.php';?>
+<?php 
+include 'intro.php';
+include 'menu.php';
+?>
       <div align="center">
          <h2>Connexion</h2>
          <br /><br />
@@ -58,5 +55,6 @@ if(isset($_POST['formconnexion'])) {
          }
          ?>
       </div>
-   </body>
-</html>
+      <?php
+include 'outro.php';
+?> 

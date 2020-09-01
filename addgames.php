@@ -55,12 +55,10 @@ $synopsis = htmlspecialchars($_POST['synopsis']);
 <!-- if(isset($erreur)) {
    echo '<font color="red">'.$erreur."</font>"; -->
 
-<html>
-   <head>
-      <title>TUTO PHP</title>
-      <meta charset="utf-8">
-   </head>
-   <body>
+<?php 
+include 'intro.php';
+include 'menu.php';
+?>
       <h2>Inscription</h2>
       <div align="center">
          <p></p>
@@ -132,5 +130,6 @@ $synopsis = htmlspecialchars($_POST['synopsis']);
             </table>   
          </form>   
       </div>
-   </body>
-</html>
+<?php
+include 'outro.php';
+?> 

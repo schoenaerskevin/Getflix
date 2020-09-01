@@ -41,14 +41,10 @@ $commentaires = $bdd->query('SELECT * FROM chat ORDER BY id ');
 $jeux = $bdd->query('SELECT * FROM games ORDER BY nom ');
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-   <meta charset="utf-8" />
-   <title>Administration</title>
-</head>
-<body>
-<?php include 'menu.php';?>
+
+<?php 
+include 'intro.php';
+include 'menu.php';?>
 <ul>
       <?php while($m = $membres->fetch()) { ?>
       <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Supprimer</a></li>
@@ -84,8 +80,8 @@ $jeux = $bdd->query('SELECT * FROM games ORDER BY nom ');
 ?> 
   
   </ul>
-
-</body>
-</html>
+  <?php
+include 'outro.php';
+?> 
 
      

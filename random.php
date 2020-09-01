@@ -13,22 +13,18 @@ catch(Exception $e)
 {
         die('Error : '.$e->getMessage());
 }
+//requête du droit de l'user
+$droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
+$droit->execute(array($_SESSION['pseudo']));
+$droituser = $droit-> fetch();
 
 // 12 random games
 $req = $bdd->query('SELECT * FROM games ORDER BY RAND() LIMIT 12');
 ?>
-
- <!DOCTYPE html>
- <html lang="fr">
- <head>
- 	<meta charset="UTF-8">
- 	<title>STREAMLER.COM</title>
- </head>
- <body>
-   <?php 
-        include 'menu.php';
-
- 	 ?>
+<?php 
+include 'intro.php';
+include 'menu.php';
+?>
 
 <div class="container">
 <div class="row">
@@ -61,8 +57,8 @@ $req->closeCursor();
 </div>
 </div>
 <?php 
-      include 'chat.php';
-
- 	 ?>
-</body>
- </html>
+ 	  if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
+                include 'chat.php';
+      }
+include 'outro.php';
+?> 
