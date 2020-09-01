@@ -73,10 +73,10 @@ if(isset($_GET['id'])) {
         <p><?php echo $jeuinfo['genre']; ?></p>
         <br>
         <H4>Platforms:</h4>
-        <p><?php echo $jeuinfo['plate-forme']; ?></p>
+        <p><?php echo $jeuinfo['plateforme']; ?></p>
         <br>
         <H4>Date:</h4>
-        <p><?php echo $jeuinfo['date-sortie']; ?></p>
+        <p><?php echo $jeuinfo['datesortie']; ?></p>
       </div>
       <div class="col-8">
         <h4>Synopsis</h4>

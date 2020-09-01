@@ -65,20 +65,20 @@ catch(Exception $e)
           Genres
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Adventure</a>
-          <a class="dropdown-item" href="#">Arcade</a>
-          <a class="dropdown-item" href="#">Indie</a>
-          <a class="dropdown-item" href="#">Fighting</a>
-          <a class="dropdown-item" href="#">FPS</a>
-          <a class="dropdown-item" href="#">Platform</a>
-          <a class="dropdown-item" href="#">Puzzle</a>
-          <a class="dropdown-item" href="#">Racing</a>
-          <a class="dropdown-item" href="#">RPG</a>
-          <a class="dropdown-item" href="#">Simulation</a>
-          <a class="dropdown-item" href="#">Sports</a>
-          <a class="dropdown-item" href="#">Strategy</a>
-          <a class="dropdown-item" href="#">Tactical</a>
+          <!-- <a class="dropdown-item" href="filtre.php">Action</a> -->
+          <a class="dropdown-item" href="filtre.php?genre=adventure">Adventure</a>
+          <a class="dropdown-item" href="filtre.php?genre=arcade">Arcade</a>
+          <a class="dropdown-item" href="filtre.php?genre=indie">Indie</a>
+          <!-- <a class="dropdown-item" href="filtre.php?genre=fighting">Fighting</a> -->
+          <a class="dropdown-item" href="filtre.php?genre=shooter">FPS</a>
+          <a class="dropdown-item" href="filtre.php?genre=platform">Platform</a>
+          <a class="dropdown-item" href="filtre.php?genre=puzzle">Puzzle</a>
+          <a class="dropdown-item" href="filtre.php?genre=racing">Racing</a>
+          <a class="dropdown-item" href="filtre.php?genre=rpg">RPG</a>
+          <a class="dropdown-item" href="filtre.php?genre=simulation">Simulation</a>
+          <a class="dropdown-item" href="filtre.php?genre=sport">Sports</a>
+          <a class="dropdown-item" href="filtre.php?genre=strategy">Strategy</a>
+          <a class="dropdown-item" href="filtre.php?genre=tactical">Tactical</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -86,11 +86,11 @@ catch(Exception $e)
           Platforms
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">PC (Windows)</a>
-          <a class="dropdown-item" href="#">Playstation 4</a>
-          <a class="dropdown-item" href="#">Xbox</a>
-          <a class="dropdown-item" href="#">Nintendo Switch</a>
-          <a class="dropdown-item" href="#">Mac OSx</a>
+          <a class="dropdown-item" href="platefiltre.php?plateforme=pc">PC (Windows)</a>
+          <a class="dropdown-item" href="platefiltre.php?plateforme=ps4">Playstation 4</a>
+          <a class="dropdown-item" href="platefiltre.php?plateforme=xbox">Xbox</a>
+          <a class="dropdown-item" href="platefiltre.php?plateforme=switch">Nintendo Switch</a>
+          <a class="dropdown-item" href="platefiltre.php?plateforme=mac">Mac OSx</a>
         </div>
       </li>
     </ul>
