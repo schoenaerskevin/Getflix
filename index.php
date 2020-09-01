@@ -36,7 +36,8 @@ $donnees = $req-> fetch();
 	  if ($donnees['droit']=="premium" || $donnees['droit']=="admin"){
       	include 'chat.php';
 	}
- 	 ?>
+	  ?>
+	  <script src="script.js"></script>
  </body>
  </html>
 
