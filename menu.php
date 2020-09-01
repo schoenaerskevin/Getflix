@@ -55,7 +55,7 @@ catch(Exception $e)
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="random.php">Top 10 Games <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="random.php">Top  Games <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="random.php">Most Popular <span class="sr-only">(current)</span></a>
@@ -96,10 +96,19 @@ catch(Exception $e)
     </ul>
       <?php 
         include 'search.php';
-      ?>     
-      <a class="btn btn-outline-primary" href="connexion.php" role="button">Log In</a>
+      ?>
+      <?php   
+      if ($donnees['droit']=="premium" || $donnees['droit']=="admin" || $donnees['droit']=="free"){
+        echo ' <a class="btn btn-outline-primary" href="deconnexion.php" role="button">Log Out</a>';
+        }else {
+          ;echo '<a class="btn btn-outline-primary" href="connexion.php" role="button">Log In</a>';
+        }
+        ?>  
+        
+      
       <a class="btn btn-outline-primary" href="inscription.php" role="button">Sign Up</a>
-      <a class="btn btn-outline-primary" href="profil.php" role="button">profil</a>
+      
+      <a class="btn btn-outline-primary" href="profil.php?id=<?= $_SESSION['id'] ?>" role="button">profil</a>
     
   </div>
 </nav>
