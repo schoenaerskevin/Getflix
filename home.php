@@ -1,19 +1,7 @@
 
 <?php
-	session_start();
 
-	$id_session = session_id();
-// * done by Seb
-// Connect to database
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=streamler;charset=utf8', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
+include 'dbreq.php';
 
 // 12 random games
 $req = $bdd->query('SELECT * FROM games');

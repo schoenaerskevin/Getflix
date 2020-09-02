@@ -1,23 +1,6 @@
 <?php 
 
-session_start();
-
-?>
-
-
-<?php 
-// * done by Seb
-// Connect to database
-try
-{
-	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
-
+include 'dbreq.php';
 //treatment of form of chat.php
 if (isset($_POST['submit'])){   
     //if (isset($_SESSION['pseudo'])){

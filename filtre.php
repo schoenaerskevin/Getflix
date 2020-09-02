@@ -1,15 +1,5 @@
 <?php
- session_start();
- //* connection base de donnée
- try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
+include 'dbreq.php';
 //requête du droit de l'user
 $droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
 $droit->execute(array($_SESSION['pseudo']));
