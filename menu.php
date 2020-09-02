@@ -53,13 +53,24 @@ include 'dbreq.php';
         include 'search.php';
       ?>
       <?php   
+       if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
+        echo '<a class="btn btn-outline-primary pull-right" href="chat.php" role="button">Chat</a>';
+        }
       if ($droituser['droit']){
         echo ' <a class="m-2 btn btn-outline-primary" href="deconnexion.php" role="button">Log Out</a>';
         }else {
           ;echo '<a class="m-2 btn btn-outline-primary" href="connexion.php" role="button">Log In</a>';
         }
-        ?>  
-        
-      
+        ?>       
       <a class="m-1 btn btn-outline-primary" href="inscription.php" role="button">Sign Up</a>
-      
+     
+      <a class="btn btn-outline-primary" href="profil.php" role="button">profil</a>
+      <?php 
+        if ($droituser['droit']=="admin"){
+        echo '<a class="btn btn-outline-primary pull-right" href="admin.php" role="button">Admin</a>';
+        }
+        ?>   
+  </div>
+</nav>
+<?php echo '<h2>Bonjour ' . $_SESSION['pseudo'] .' </h2>';
+?>

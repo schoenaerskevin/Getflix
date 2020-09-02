@@ -19,7 +19,6 @@ if(isset($_GET['genre']) AND !empty($_GET['genre'])) {
 include 'intro.php';
 include 'menu.php';
 ?>
-
 <div class="container-fluid">
 <div class="row">
  <!-- renvoie la page dynamique en fonction de la recherche -->
@@ -47,13 +46,11 @@ include 'menu.php';
 
 </div>
         
-   <?php } ?>
-</div>
-</div>
 
+   <?php } 
+   ?>
+   </div>
+   </div>
    <?php
-   	  if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
-                include 'chat.php';
-      }
 include 'outro.php';
 ?> 
