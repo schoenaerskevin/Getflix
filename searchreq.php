@@ -19,6 +19,8 @@ $droituser = $droit-> fetch();
 include 'intro.php';
 include 'menu.php';
 ?>
+<div class="container-fluid">
+<div class="row">
  <!-- renvoie la page dynamique en fonction de la recherche -->
 <?php while($donnees = $req->fetch()) { ?>
       
@@ -26,7 +28,7 @@ include 'menu.php';
 <?php //add id to get the rigth jeu.php 
         echo htmlspecialchars($donnees['id']);
 ?>'>
-<img src="
+<img class= "m-2 border border-white rounded-lg" src="
         <?php
                 //img from db
                 echo htmlspecialchars('data:image/jpeg;base64,'.base64_encode( $donnees['cover'] )); 
@@ -38,10 +40,10 @@ include 'menu.php';
         ?>
         "></a>
         
-   <?php } ?>
-   <?php
-   	  if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
-                include 'chat.php';
-      }
+   <?php } 
+      ?>
+      </div>
+      </div>
+      <?php
 include 'outro.php';
 ?> 

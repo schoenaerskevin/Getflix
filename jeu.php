@@ -68,8 +68,5 @@ if(isset($_GET['id'])) {
 }
 ?>
 <?php
-if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
-      	include 'chat.php';
-  }
   include 'outro.php';
 	  ?>    

@@ -10,8 +10,5 @@ $droituser = $droit-> fetch();
 	include 'intro.php';
     	include 'menu.php';
 	  include 'home.php';
-	  if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
-		  include 'chat.php';
-	}
 	include 'outro.php';
 	  ?>    

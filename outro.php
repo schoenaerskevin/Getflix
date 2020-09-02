@@ -6,11 +6,6 @@
         
         <div class="footer-copyright py-2 text-center">© 2020 Copyright:
         <a href="#"> streamler.com</a>
-        <?php 
-        if ($droituser['droit']=="admin"){
-        echo '<a class="btn btn-outline-primary pull-right" href="admin.php" role="button">Admin</a>';
-        }
-        ?>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 	  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

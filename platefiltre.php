@@ -20,6 +20,8 @@ if(isset($_GET['plateforme']) AND !empty($_GET['plateforme'])) {
         include 'menu.php';
 
  	 ?>
+          <div class="container-fluid">
+<div class="row">
  <!-- renvoie la page dynamique en fonction de la recherche -->
 <?php while($donnees = $req->fetch()) { ?>
       
@@ -27,7 +29,7 @@ if(isset($_GET['plateforme']) AND !empty($_GET['plateforme'])) {
 <?php //add id to get the rigth jeu.php 
         echo htmlspecialchars($donnees['id']);
 ?>'>
-<img src="
+<img class= "m-2 border border-white rounded-lg" src="
         <?php
                 //img from db
                 echo htmlspecialchars('data:image/jpeg;base64,'.base64_encode( $donnees['cover'] )); 
@@ -40,7 +42,8 @@ if(isset($_GET['plateforme']) AND !empty($_GET['plateforme'])) {
         "></a>
         
    <?php } 
-     if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
-        include 'chat.php';
-}
+?>
+</div>
+</div>
+<?php
    include 'outro.php';?>

@@ -1,6 +1,8 @@
 <?php 
 
 include 'dbreq.php';
+include 'intro.php';
+include 'menu.php';
 //treatment of form of chat.php
 if (isset($_POST['submit'])){   
     //if (isset($_SESSION['pseudo'])){
@@ -17,7 +19,7 @@ if (isset($_POST['submit'])){
 }
 ?>
 <!--form to add message to chat-->
-<div class="fixed-left">
+<section class="">
 <form method="POST" action="" class="form-group"> 
 <label for="comment"><H2>Chat</H2></label>
 <input type="text" name="comment" class="form-control">
@@ -55,4 +57,7 @@ while ($donnees = $req->fetch())
 // end while for comment
 $req->closeCursor();
 ?>
-</div>
+</section>
+<?php 
+include 'outro.php';
+?>
