@@ -8,6 +8,7 @@ if(isset($_POST['forminscription'])) {
    $mdp = sha1($_POST['mdp']);
    $mdp2 = sha1($_POST['mdp2']);
    $droit = htmlspecialchars($_POST['droit']);
+   var_dump($mdp);
    
    
    if(!empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['mail2']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])&& !empty($_POST['droit']) ) {

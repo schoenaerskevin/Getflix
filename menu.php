@@ -63,7 +63,7 @@ include 'dbreq.php';
       
       <a class="btn btn-outline-primary" href="inscription.php" role="button">Sign Up</a>
       
-      <a class="btn btn-outline-primary" href="profil.php?id=<?= $_SESSION['id'] ?>" role="button">profil</a>
+      <a class="btn btn-outline-primary" href="profil.php" role="button">profil</a>
     
   </div>
   <?php echo "Bonjour ".$_SESSION['pseudo'];

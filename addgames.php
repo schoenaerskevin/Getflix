@@ -1,5 +1,5 @@
 <?php
-include 'dbreq.php';
+
 // if(isset($_POST['formaddgames'])) {
 
 $nom = htmlspecialchars($_POST['nom']);
@@ -46,10 +46,10 @@ $synopsis = htmlspecialchars($_POST['synopsis']);
    echo '<font color="red">'.$erreur."</font>"; -->
 
 <?php 
-include 'intro.php';
-include 'menu.php';
+
+
 ?>
-      <h2>Inscription</h2>
+      
       <div align="center">
          <p></p>
          <form method="POST" action="">
@@ -120,6 +120,3 @@ include 'menu.php';
             </table>   
          </form>   
       </div>
-<?php
-include 'outro.php';
-?> 

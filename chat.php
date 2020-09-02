@@ -15,7 +15,15 @@ if (isset($_POST['submit'])){
         }
    // }
 }
-
+?>
+<!--form to add message to chat-->
+<div class="fixed-left">
+<form method="POST" action="" class="form-group"> 
+<label for="comment"><H2>Chat</H2></label>
+<input type="text" name="comment" class="form-control">
+<input class="btn btn-primary" type="submit" name="submit" value="Post">
+</form> 
+<?php
 // last 20 comments
 $req = $bdd->query('SELECT id, pseudo, comment FROM chat ORDER BY id DESC LIMIT 0, 20');
 
@@ -46,7 +54,5 @@ while ($donnees = $req->fetch())
 } 
 // end while for comment
 $req->closeCursor();
-
-
 ?>
-
+</div>
