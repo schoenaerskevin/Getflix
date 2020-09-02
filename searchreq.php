@@ -12,8 +12,6 @@ if(isset($_GET['search']) AND !empty($_GET['search'])) {
 $droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
 $droit->execute(array($_SESSION['pseudo']));
 $droituser = $droit-> fetch();
-
-
 ?>
 <?php 
 include 'intro.php';
@@ -23,8 +21,9 @@ include 'menu.php';
 <div class="row">
  <!-- renvoie la page dynamique en fonction de la recherche -->
 <?php while($donnees = $req->fetch()) { ?>
-      
-      <a href='jeu.php?id=
+
+<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 text-center">
+<a href='jeu.php?id=
 <?php //add id to get the rigth jeu.php 
         echo htmlspecialchars($donnees['id']);
 ?>'>
@@ -38,8 +37,7 @@ include 'menu.php';
                 //nom from db
                 echo htmlspecialchars($donnees['nom']); 
         ?>
-        "></a>
-        
+        "></a>     
    <?php } 
       ?>
       </div>
