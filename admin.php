@@ -47,8 +47,19 @@ include 'menu.php';?>
       <?php } ?>
    </ul>
    <ul>
-
+      <?php while($m = $membres->fetch()) { ?>
+      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Supprimer</a></li>
+      <?php } ?>
+   </ul>
+   <ul>
+   
+   <?php 
+        include 'addgames.php';
+      ?>
+       
+       </ul>
     <?php
+   
  
    echo '<FORM method="get" action="delgames.php" ><select name="id">';
          while ($games=$jeux->fetch()) {
