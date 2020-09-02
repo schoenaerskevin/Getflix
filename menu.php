@@ -54,18 +54,12 @@ include 'dbreq.php';
       ?>
       <?php   
       if ($droituser['droit']){
-        echo ' <a class="btn btn-outline-primary" href="deconnexion.php" role="button">Log Out</a>';
+        echo ' <a class="m-2 btn btn-outline-primary" href="deconnexion.php" role="button">Log Out</a>';
         }else {
-          ;echo '<a class="btn btn-outline-primary" href="connexion.php" role="button">Log In</a>';
+          ;echo '<a class="m-2 btn btn-outline-primary" href="connexion.php" role="button">Log In</a>';
         }
         ?>  
         
       
-      <a class="btn btn-outline-primary" href="inscription.php" role="button">Sign Up</a>
+      <a class="m-1 btn btn-outline-primary" href="inscription.php" role="button">Sign Up</a>
       
-      <a class="btn btn-outline-primary" href="profil.php" role="button">profil</a>
-    
-  </div>
-  <?php echo "Bonjour ".$_SESSION['pseudo'];
-?>
-</nav>

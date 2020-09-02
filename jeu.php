@@ -17,7 +17,7 @@ if(isset($_GET['id'])) {
   include 'intro.php';
       include 'menu.php';
 ?>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
       <div class="col-4  responsive">
         <H2 class="font-weight-bold"><u><?php echo $jeuinfo['nom']; ?></u></H2>
