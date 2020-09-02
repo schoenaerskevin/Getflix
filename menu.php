@@ -69,15 +69,3 @@ include 'dbreq.php';
   <?php echo "Bonjour ".$_SESSION['pseudo'];
 ?>
 </nav>
-
-
-<footer class="page-footer font-small special-color-dark fixed-bottom">
-        
-        <div class="footer-copyright py-2 text-center">© 2020 Copyright:
-        <a href="#"> streamler.com</a>
-        <?php 
-        if ($droituser['droit']=="admin"){
-        echo '<a class="btn btn-outline-primary pull-right" href="admin.php" role="button">Admin</a>';
-        }
-        ?>
-</footer>
