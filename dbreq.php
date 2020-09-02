@@ -7,7 +7,7 @@
 try
 {
     //! mise en comment de la ligne qui ne correspond pas
-    $bdd = new PDO('mysql:host=localhost;dbname=streamler;charset=utf8', 'root', 'root');
+    $bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
     //$bdd = new PDO('mysql:host=localhost;dbname=streamler;charset=utf8', 'root', 'root');
 }
 //error
