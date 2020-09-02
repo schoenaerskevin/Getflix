@@ -4,7 +4,7 @@ try
 {
   try
 {
-	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
 }
 //error
 catch(Exception $e)
@@ -34,13 +34,13 @@ if(isset($_GET['id'])) {
   include 'intro.php';
       include 'menu.php';
 ?>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-      <div class="col-4">
-        <H2><?php echo $jeuinfo['nom']; ?></H2>
+      <div class="col-4  responsive">
+        <H2 class="font-weight-bold"><u><?php echo $jeuinfo['nom']; ?></u></H2>
         <div>
             
-          <img src="
+        <img class="m-2 border border-white rounded-lg responsive" src="
           <?php
                   //img from db
                   echo htmlspecialchars('data:image/jpeg;base64,'.base64_encode( $jeuinfo['cover'] )); 
@@ -56,25 +56,25 @@ if(isset($_GET['id'])) {
       </div>
       <div class="col-8">
           <br> <br>
-      <iframe width="420" height="315"
+      <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="  border border-white rounded-lg embed-responsive-item " width="" height=""
         src="<?php echo $jeuinfo['trailer']; ?>"allowfullscreen>
         </iframe>
+      </div>
       </div>
   </div>
   <br>
   <div class="row">
       <div class="col-4">
-        <H4>Genre:</h4>
+        <H4 class="font-weight-bold"><u>Genre:</u></h4>
         <p><?php echo $jeuinfo['genre']; ?></p>
-        <br>
-        <H4>Platforms:</h4>
-        <p><?php echo $jeuinfo['plateforme']; ?></p>
-        <br>
-        <H4>Date:</h4>
-        <p><?php echo $jeuinfo['datesortie']; ?></p>
+        <H4 class="font-weight-bold"><u>Platforms:</u></h4>
+        <p ><?php echo $jeuinfo['plate-forme']; ?></p>
+        <H4 class="font-weight-bold"><u>Date:</u></h4>
+        <p><?php echo $jeuinfo['date-sortie']; ?></p>
       </div>
       <div class="col-8">
-        <h4>Synopsis</h4>
+        <h4 class="font-weight-bold"><u>Synopsis:</u></h4>
         <p><?php echo $jeuinfo['synopsis']; ?></p>
       
       </div>

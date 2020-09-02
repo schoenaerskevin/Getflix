@@ -4,7 +4,7 @@ session_start();
 //link bdd
 try
 {
-	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
 }
 //error
 catch(Exception $e)
