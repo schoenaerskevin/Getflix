@@ -1,18 +1,5 @@
 <?php
-	session_start();
-
-	$id_session = session_id();
-// * done by Seb
-// Connect to database
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=streamler;charset=utf8', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
+include 'dbreq.php';
 //requête du droit de l'user
 $droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
 $droit->execute(array($_SESSION['pseudo']));

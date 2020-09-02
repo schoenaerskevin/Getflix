@@ -1,15 +1,5 @@
 <?php
-session_start();
-//link bdd
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
+include 'dbreq.php';
 // if(isset($_POST['formaddgames'])) {
 
 $nom = htmlspecialchars($_POST['nom']);

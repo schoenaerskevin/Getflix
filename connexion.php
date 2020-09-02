@@ -1,15 +1,5 @@
 <?php
-session_start();
- //link bdd
- try
- {
-    $bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
- }
- //error
- catch(Exception $e)
- {
-         die('Error : '.$e->getMessage());
- }
+include 'dbreq.php';
  //verifie que mail et mdp correspondent a une entree de la bdd
 if(isset($_POST['formconnexion'])) {
    $mailconnect = htmlspecialchars($_POST['mailconnect']);

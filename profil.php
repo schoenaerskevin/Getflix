@@ -1,18 +1,5 @@
 <?php
-session_start();
-
-
-
- 
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
+include 'dbreq.php';
  
 if(isset($_GET['id']) AND $_GET['id'] > 0) {
    $getid = intval($_GET['id']);

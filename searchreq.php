@@ -1,15 +1,5 @@
 <?php
- session_start();
- //* connection base de donnée
- try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
+include 'dbreq.php';
 
  //* requete +creation variable
 //$req = $bdd->query('SELECT * FROM games ORDER BY nom DESC');

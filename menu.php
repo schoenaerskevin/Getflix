@@ -1,27 +1,5 @@
 <?php
-    //On démarre une nouvelle session
-    session_start();
-    /*On utilise session_id() pour récupérer l'id de session s'il existe.
-     *Si l'id de session n'existe  pas, session_id() rnevoie une chaine
-     *de caractères vide*/
-    
-
-    try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
-    //$bdd = new PDO('mysql:host=127.0.0.1;dbname=streamler', 'root', 'root');
-
-
-
-   //  if(isset($_GET['id']) AND $_GET['id'] > 0) {
-     
-      
+include 'dbreq.php';     
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a style="font-family: 'Londrina Shadow', cursive; font-size:3em" class="navbar-brand" href="index.php">STREAMLER.COM <i class="fa fa-gamepad" style="font-size:1em"></i></a>

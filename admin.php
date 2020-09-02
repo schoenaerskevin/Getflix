@@ -1,15 +1,5 @@
 <?php
-//link base de donné
-session_start();
-try
-{
-	$bdd = new PDO('mysql:host=database;dbname=streamler', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
+include 'dbreq.php';
 //permet a l'admin de valider ou supprimer un membre 
 if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
    if(isset($_GET['confirme']) AND !empty($_GET['confirme'])) {

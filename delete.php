@@ -1,22 +1,5 @@
 <?php
-session_start();
-try
-{
-  try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=streamler', 'root', 'root');
-}
-//error
-catch(Exception $e)
-{
-        die('Error : '.$e->getMessage());
-}
-  //$bdd = new PDO('mysql:host=127.0.0.1;dbname=Streamler;charset=utf8', 'root', 'root');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+include 'dbreq.php';
 //* delete user
 $delete = $_GET["id"];
 $insertmbr3 = $bdd->prepare('DELETE from mdp where id=:delete');  
