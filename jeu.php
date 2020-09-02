@@ -17,7 +17,7 @@ if(isset($_GET['id'])) {
   include 'intro.php';
       include 'menu.php';
 ?>
-<div class="container-fluid">
+<div class="container">
   <div class="row">
       <div class="col-4  responsive">
         <H2 class="font-weight-bold"><u><?php echo $jeuinfo['nom']; ?></u></H2>
@@ -52,9 +52,9 @@ if(isset($_GET['id'])) {
         <H4 class="font-weight-bold"><u>Genre:</u></h4>
         <p><?php echo $jeuinfo['genre']; ?></p>
         <H4 class="font-weight-bold"><u>Platforms:</u></h4>
-        <p ><?php echo $jeuinfo['plate-forme']; ?></p>
+        <p ><?php echo $jeuinfo['plateforme']; ?></p>
         <H4 class="font-weight-bold"><u>Date:</u></h4>
-        <p><?php echo $jeuinfo['date-sortie']; ?></p>
+        <p><?php echo $jeuinfo['datesortie']; ?></p>
       </div>
       <div class="col-8">
         <h4 class="font-weight-bold"><u>Synopsis:</u></h4>
