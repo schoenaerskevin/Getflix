@@ -1,6 +1,3 @@
-<?php
-include 'dbreq.php';     
-?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a style="font-family: 'Londrina Shadow', cursive; font-size:3em" class="navbar-brand" href="index.php">STREAMLER.COM <i class="fa fa-gamepad" style="font-size:1em"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

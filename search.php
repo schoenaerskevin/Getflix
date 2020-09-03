@@ -1,6 +1,5 @@
 
 <?php
-include 'dbreq.php';
 
  //*definition variable + requete  
 //$req = $bdd->query('SELECT * FROM games ORDER BY nom DESC');
