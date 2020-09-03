@@ -1,3 +1,3 @@
 $(document).ready(function() { 
-   $("#chatBox.php").load("chatbox.php"); 
+   $("#chatBox").load("chatbox.php"); 
    
