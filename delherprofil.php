@@ -1,5 +1,4 @@
 <?php
-include 'dbreq.php';
 //* delete user
 $delete = $_GET["id"];
 $insertmbr7 = $bdd->prepare('DELETE from mdp where id=:delete');  
