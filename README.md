@@ -1,4 +1,7 @@
 # Streamler
+![](https://img.shields.io/badge/code-WIP-yellow)
+![](https://img.shields.io/badge/chat-refresh%20fail-orange)
+![](https://img.shields.io/badge/Company-Becode-blue)
 
 
 ## Introduction
@@ -40,6 +43,8 @@ Réalisation :En equipe de 4
 
 Début : 24/08/2020
 
+Béta : 01/09/2020  
+
 v1.0 :   
 
 ## Historique
@@ -53,21 +58,14 @@ v1.0 :
 
 ## Poste occupé durant la Réalisation
 
-+ Junior Web Dev chez Becode  
+**Junior Web Dev chez Becode**
 + Laurent : Codeur
 + Olivier :  Codeur
 + Sebastien : Project Manager & Codeur
 + Kevin : Git master via pull request & Codeur
 
-## Approche
-
-1) creation d'un trello pour l'organisation : https://trello.com/b/9JVvOPKb/getflix
-2) Choix du nom de site
-3) maquettage via balsamiq 3. 
-4) plan de site 
-5) maquettage base de donnée
-6) 
-
-
-
 ## Credits
+
+[badges](https://shields.io/)  
+[IGBD](https://www.igdb.com)
+
