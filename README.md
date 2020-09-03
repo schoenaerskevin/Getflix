@@ -37,7 +37,7 @@ Réalisation :En equipe de 4
 
 ## Liens vers la page  
 
-[Içi](https://github.com/becodeorg/BXL-Swartz-3-21/blob/master/06-PHP/getflix_project.md)  
+[Içi](http://streamler.orgfree.com/index.php)  
 
 ## Progression
 
@@ -49,12 +49,15 @@ v1.0 :
 
 ## Historique
 
-+ 24/08/2020  : création du readme, mise en place de la to do list via "trello, maquettage,bdd film via api et trouver un hebergeur gratuit supportant le php
-+ 25/08/2020  : plan du  site et et maquettage  base de donnée, uniformisation de la structure de la base de donnée, implémentation du random,creation fichier jeu.php
-+ 26/08/2020   : resolution affichage random, resolution inscription via plusieurs table dans la base de données 
-+ 27/08/2020 : début home.php, finalisation deconnexion.php, lier table utilisateur et mot de passe,
-+ 28/08/2020 : jeu.php terminer, random.php terminer, back office admin,
-+ 31/08/2020 : terminer chat,admin, suppresion profil utilisateur, droit session
++ 24/08/2020 : création du readme, mise en place de la to do list via "trello, maquettage,bdd film via api et trouver un hebergeur gratuit supportant le php.
++ 25/08/2020 : plan du  site et et maquettage  base de donnée, uniformisation de la structure de la base de donnée, implémentation du random games,création des pages dynamiques de jeu.
++ 26/08/2020 : résolution problème d'affichage du random, résolution de l'inscription via plusieurs table dans la base de données (problème de sécurité).
++ 27/08/2020 : début de l'affichage du contenu de la page d'accueil, finalisation de l'option de déconnexion.
++ 28/08/2020 : fin des pages jeu dnamique, fin du random games, création du back-office admin.
++ 31/08/2020 : implémentation du chat,finition de la partie admin, implémentation de la suppresion du profil de l'utilisateur, gestion des différents droits de l'utilisateur.
++ 01/09/2020 : mise en place des pages de filtres, mise en place de la barre de recherche, inversion des boutons log in/log out en fonction du status de connexion, formatage du code PHP.
++ 02/09/2020 : mise en beauté du site, uniformisation du PDO, modification du chat, début de la mise en place de la récupération de mot de passe.
++ 03/09/2020 : mise en ligne du chat, test de celui-çi, problème de refresh détecté.
 
 ## Poste occupé durant la Réalisation
 
