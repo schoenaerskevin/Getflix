@@ -6,7 +6,9 @@
         
         <div class="footer-copyright py-2 text-center">© 2020 Copyright:
         <a href="#"> streamler.com</a>
+        </div>
 </footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 	  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
