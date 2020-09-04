@@ -60,15 +60,15 @@ include 'menu.php';?>
        </ul>
     <?php
    
- 
-   echo '<FORM method="get" action="delgames.php" ><select name="id">';
-         while ($games=$jeux->fetch()) {
-          echo '<option value="' . $games["id"] . '">' . $games["nom"] . '</option>';
-        }
+ //! ajout blanc dans table games a chaque actualisation de la page admin
+   // echo '<FORM method="get" action="delgames.php" ><select name="id">';
+   //       while ($games=$jeux->fetch()) {
+   //        echo '<option value="' . $games["id"] . '">' . $games["nom"] . '</option>';
+   //      }
         
-   echo '</select>';
-   echo '<INPUT TYPE="submit"  VALUE=" supprimer ">';
-   echo '</form>';
+   // echo '</select>';
+   // echo '<INPUT TYPE="submit"  VALUE=" supprimer ">';
+   // echo '</form>';
   
 
 

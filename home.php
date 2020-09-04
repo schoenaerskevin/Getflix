@@ -1,8 +1,6 @@
 
 <?php
 
-//include 'dbreq.php';
-
 // 12 random games
 $req = $bdd->query('SELECT * FROM games');
 ?>

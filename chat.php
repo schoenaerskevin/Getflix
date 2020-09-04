@@ -25,14 +25,16 @@ if (isset($_POST['submit'])){
 <input type="text" name="comment" class="form-control">
 <input class="btn btn-primary" type="submit" name="submit" value="Post">
 </form> 
-<?php
+<div class="chat" id="chatBox"  >
+<?php 
+
 // last 20 comments
 $req = $bdd->query('SELECT id, pseudo, comment FROM chat ORDER BY id DESC LIMIT 0, 20');
 
 while ($donnees = $req->fetch())
 {
 ?>
-<div class="chat" id="chatBox" onload="refreshTimer()">
+
     <h3 class="pseudochat">
         <?php
         //pseudo from db
@@ -51,12 +53,15 @@ while ($donnees = $req->fetch())
     echo nl2br($donnees['comment']);
     ?>
     </p>
-</div>
+
 <?php
+
 } 
 // end while for comment
 $req->closeCursor();
 ?>
+
+</div>
 </section>
 <?php 
 include 'outro.php';
