@@ -1,4 +1,5 @@
 <?php
+include 'dbreq.php';
 //* delete user
 $delete = $_GET["id"];
 

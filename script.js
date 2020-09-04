@@ -11,12 +11,12 @@ function submitchat(){
          document.getElementById('chatBox').innerHTML = xmlhttp.responseText; //the chatlogs from the db will be displayed inside the div section
       }
    }
-   xmlhttp.open('POST', 'chatbox.php', true); //open and send http request
+   xmlhttp.open('POST', 'chatbox.php', false); //open and send http request
    xmlhttp.send();
 }
 $(document).ready(function(e) {
       $.ajaxSetup({cache:false});
-      setInterval(function() {$('#chatBox').load('chatbox.php');
+      setInterval(function() {$('#chatBox').load('chatbox.php, # chatBox');
    //console.log("refresh");
 }, 1000);
    });
