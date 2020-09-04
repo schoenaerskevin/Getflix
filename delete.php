@@ -1,5 +1,4 @@
 <?php
-
 //* delete user
 $delete = $_GET["id"];
 $insertmbr3 = $bdd->prepare('DELETE from mdp where id=:delete');  
