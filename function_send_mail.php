@@ -24,7 +24,7 @@ try {
     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('streamler00@gmail.com', 'Streamler.com');
+    $mail->setFrom('STREAMLER-NO-REPLY@gmail.com', 'STREAMLER-NO-REPLY');
     $mail->addAddress($recipients);     // Add a recipient
     //$mail->addAddress('olivierpeeters73@gmail.com');               // Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');

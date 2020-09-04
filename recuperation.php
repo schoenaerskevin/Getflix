@@ -43,10 +43,28 @@
 
                     //Send email
                     $subject='Reset password';
-                    $message='Hello <b>' .$pseudo. '</b>,<br /><br />';
-                    $message.='Here is your verification code: <b>'.$recup_code.'</b><br /><br />';
-                    $message.='Please click <a href="http://localhost/exercices/Getflix/recuperation.php?section=code"><b>here</b></a> to reset your password.<br /><br />';
-                    $message.='Streamler.com';
+                    $message='
+                    <html>
+                        <head>
+
+                            <title>STREAMLER.COM</title>
+                            <meta charset="utf-8" />
+                        </head>
+                        <body style="background-color:#343a40; color:white;">
+                            <div align="center" style="font-size:150%">
+                                <img width="100%" height="100px" src="http://streamler.orgfree.com/assets/img/mail_banner.PNG">
+                                <p>Hello <b>'.$pseudo.'</b>,</p>
+                                <p>Here is your verification code: <b>'.$recup_code.'</b></p>
+                                <p>Please click <a href="http://localhost/exercices/Getflix/recuperation.php?section=code"><b>HERE</b></a> to reset your password.</p>
+                                <p>.</p>
+                                <p>See you soon on <b>Streamler.com</b></p>
+                                <img width="100%" height="10px" src="http://streamler.orgfree.com/assets/img/bottom_line.PNG">
+                                <p style="font-size:60%">This email is sent from an account we use for sending messages only.</p>
+                                <p style="font-size:60%">So if you want to contact us, don\'t reply to this email - we won\'t  receive your response.</p>
+                             </div>
+                           </font>
+                        </body>
+                    </html>';
                     $recipients=$recup_mail;
                     sendmail($subject,$message,$recipients);
 
@@ -63,6 +81,7 @@
 
     }
 
+    //verification code processing
     if(isset($_POST['verif_submit'],$_POST['verif_code'])) {
         if(!empty($_POST['verif_code'])) {
             $verif_code = htmlspecialchars($_POST['verif_code']);
@@ -70,7 +89,7 @@
             $verif_req-> execute(array($_SESSION['recup_mail'],$verif_code));
             $verif_req = $verif_req->rowCount();
             if($verif_req == 1) {
-                $del_req = $bdd->prepare('DELETE FROM recuperation WHERE mail = ?');
+                $del_req = $bdd->prepare('DELETE FROM recuperation WHERE mail = ?');             //if OK, delete entry
                 $del_req->execute(array($_SESSION['recup_mail']));
                 header('Location:http://localhost/exercices/Getflix/recuperation.php?section=changemdp');
             } else {
@@ -89,7 +108,6 @@
                 if($mdp == $mdpc) {
                     $mdp = sha1($mdp);
 
-                    //!TO DOOOOOOOOOOOOOOOOO
                     $ins_id = $bdd->prepare('SELECT * FROM user WHERE mail = ?');    
                     $ins_id->execute(array($_SESSION['recup_mail'])); 
                     $ins_id = $ins_id->fetch();
@@ -119,6 +137,7 @@
     </head>
     <body>
         <div>
+
             <h4>Password recovery</h4>
             <?php if($section == 'code') { ?>
             Password recovery for <b><?php echo $_SESSION['recup_mail'] ?></b>
@@ -144,7 +163,5 @@
             <?php if(isset($error)) { echo '<span style="color:red">'.$error.'</span>';} else { echo "<br />"; } ?>
         
         </div>
-    
     </body>
-
 </html>
