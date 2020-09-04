@@ -1,5 +1,4 @@
 <?php
-
 // if(isset($_POST['formaddgames'])) {
 
 $nom = htmlspecialchars($_POST['nom']);
