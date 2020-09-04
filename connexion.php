@@ -32,11 +32,11 @@ include 'menu.php';
 ?>
       <div align="center">
          <h2>Connexion</h2>
-         <br /><br />
+         <p></p>
          <form method="POST" action="">
             <input type="email" name="mailconnect" placeholder="Mail" />
             <input type="password" name="mdpconnect" placeholder="Mot de passe" />
-            <br /><br />
+            <p></p>
             <input type="submit" name="formconnexion" value="Se connecter !" />
          </form>
          <?php

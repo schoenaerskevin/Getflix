@@ -40,7 +40,7 @@ include 'menu.php';?>
       <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Supprimer</a></li>
       <?php } ?>
    </ul>
-   <br /><br />
+   <p></p>
    <ul>
       <?php while($c = $commentaires->fetch()) { ?>
       <li><?= $c['pseudo'] ?> : <?= $c['comment'] ?> :   <a href="delchat.php?id=<?= $c['id'] ?>">Supprimer</a></li>
@@ -53,22 +53,22 @@ include 'menu.php';?>
    </ul>
    <ul>
    
-   <?php 
-        include 'addgames.php';
-      ?>
+    <?php 
+       include 'addgames.php';
+      ?> 
        
        </ul>
     <?php
    
  //! ajout blanc dans table games a chaque actualisation de la page admin
-   // echo '<FORM method="get" action="delgames.php" ><select name="id">';
-   //       while ($games=$jeux->fetch()) {
-   //        echo '<option value="' . $games["id"] . '">' . $games["nom"] . '</option>';
-   //      }
+   echo '<FORM method="get" action="delgames.php" ><select name="id">';
+         while ($games=$jeux->fetch()) {
+          echo '<option value="' . $games["id"] . '">' . $games["nom"] . '</option>';
+        }
         
-   // echo '</select>';
-   // echo '<INPUT TYPE="submit"  VALUE=" supprimer ">';
-   // echo '</form>';
+   echo '</select>';
+   echo '<INPUT TYPE="submit"  VALUE=" supprimer ">';
+   echo '</form>';
   
 
 

@@ -12,46 +12,24 @@ $synopsis = htmlspecialchars($_POST['synopsis']);
 
 
 
-// if(!empty($_POST['nom']) && !empty($_POST['genre']) && !empty($_POST['plateforme']) && !empty($_POST['datesortie']) && !empty($_POST['trailer'])&& !empty($_POST['synopsis']) ) {
+if(!empty($_POST['nom']) && !empty($_POST['genre']) && !empty($_POST['plateforme']) && !empty($_POST['datesortie']) && !empty($_POST['trailer'])&& !empty($_POST['synopsis']) ) {
 
  // inscrit pseudo,mail,droit dans table user
  $insertmbr2 = $bdd->prepare("INSERT INTO games(nom,genre,plateforme,datesortie,trailer,cover,synopsis) VALUES(?,?,?,?,?,?,?)");                     
  $insertmbr2->execute(array($nom,$genre,$plateforme,$datessortie,$trailer,$cover, $synopsis));
- //$erreur = "Votre jeu a bien été ajouté !" ;
-//} else {
-//    $erreur = "nom !";
+ 
 
-// } else {
-// $erreur = "genre !";
-
-// } else {
-// $erreur = "plateforme !";
-
-// } else {
-// $erreur = "datesortie !";
-
-// } else {
-// $erreur = "trailer !";
-
-// } else {
-// $erreur = "cover !";
-// } else {
-//    $erreur = "synopsis !";
-
-// }
-                     
-
-?>
-<!-- if(isset($erreur)) {
-   echo '<font color="red">'.$erreur."</font>"; -->
-
-<?php 
+ 
+}     
+?> 
 
 
-?>
+
+
       
       <div align="center">
          <p></p>
+         
          <form method="POST" action="">
             <table>
                <tr>
@@ -113,7 +91,7 @@ $synopsis = htmlspecialchars($_POST['synopsis']);
                   <tr>
                   <td></td>
                   <td align="center">
-                     <br />
+                    <p></p>
                      <input type="submit" name="formaddgames" value="Add the game" />
                   </td>
                </tr>
