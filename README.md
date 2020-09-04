@@ -57,7 +57,7 @@ v1.0 :
 + 31/08/2020 : implémentation du chat,finition de la partie admin, implémentation de la suppresion du profil de l'utilisateur, gestion des différents droits de l'utilisateur.
 + 01/09/2020 : mise en place des pages de filtres, mise en place de la barre de recherche, inversion des boutons log in/log out en fonction du status de connexion, formatage du code PHP.
 + 02/09/2020 : mise en beauté du site, uniformisation du PDO, modification du chat, début de la mise en place de la récupération de mot de passe.
-+ 03/09/2020 : mise en ligne du chat, test de celui-çi, problème de refresh détecté.
++ 03/09/2020 : mise en ligne du chat, test de celui-çi, problème de refresh détecté, refonte graphique du site en cours.
 
 ## Poste occupé durant la Réalisation
 
