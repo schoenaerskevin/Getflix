@@ -52,13 +52,13 @@
                         </head>
                         <body style="background-color:#343a40; color:white;">
                             <div align="center" style="font-size:150%">
-                                <img width="100%" height="100px" src="http://streamler.orgfree.com/assets/img/mail_banner.PNG">
+                                <img width="100%" height="100px" src="http://streamler.epizy.com/assets/img/mail_banner.PNG">
                                 <p>Hello <b>'.$pseudo.'</b>,</p>
                                 <p>Here is your verification code: <b>'.$recup_code.'</b></p>
-                                <p>Please click <a href="http://localhost/exercices/Getflix/recuperation.php?section=code"><b>HERE</b></a> to reset your password.</p>
+                                <p>Please click <a href="http://streamler.epizy.com/recuperation.php?section=code"><b>HERE</b></a> to reset your password.</p>
                                 <p>.</p>
                                 <p>See you soon on <b>Streamler.com</b></p>
-                                <img width="100%" height="10px" src="http://streamler.orgfree.com/assets/img/bottom_line.PNG">
+                                <img width="100%" height="10px" src="http://streamler.epizy.com/assets/img/bottom_line.PNG">
                                 <p style="font-size:60%">This email is sent from an account we use for sending messages only.</p>
                                 <p style="font-size:60%">So if you want to contact us, don\'t reply to this email - we won\'t  receive your response.</p>
                              </div>
@@ -91,7 +91,7 @@
             if($verif_req == 1) {
                 $del_req = $bdd->prepare('DELETE FROM recuperation WHERE mail = ?');             //if OK, delete entry
                 $del_req->execute(array($_SESSION['recup_mail']));
-                header('Location:http://localhost/exercices/Getflix/recuperation.php?section=changemdp');
+                header('Location:http://streamler.epizy.com/recuperation.php?section=changemdp');
             } else {
                 $error = "Invalid code";
             }
@@ -116,7 +116,7 @@
                     $ins_mdp = $bdd->prepare('UPDATE mdp SET mdp = ? WHERE id = ?');     
                     $ins_mdp->execute(array($mdp,$ins_id['id'])); 
 
-                    header('Location:http://localhost/exercices/Getflix/connexion.php');
+                    header('Location:http://streamler.epizy.com/connexion.php');
                               
                 } else {
                     $error = "Your passwords are not the same";
