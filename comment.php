@@ -1,9 +1,21 @@
-<?php
+<?php 
+$idjeu = $_GET['id'];
+//treatment of form of chat.php
+if (isset($_POST['submit'])){   
+    //if (isset($_SESSION['pseudo'])){
+        if (isset($_POST['comment'])){
+            // Insert comment into db           
+            $req = $bdd->prepare('INSERT INTO comment (idjeu, pseudo, comment) VALUES(?, ?, ?)');
+            $req-> execute(array($idjeu, $_SESSION['pseudo'], $_POST['comment']));
+        }
+   // }
+}
 // last 20 comments
-$req = $bdd->prepare('SELECT * FROM chat WHERE idjeu = "?" ORDER BY id DESC LIMIT 0, 20');
-$insertmdp->execute(array($_GET['id']));
+$reqcomment = $bdd->prepare('SELECT * FROM comment WHERE idjeu = ?  ORDER BY id DESC LIMIT 0, 20');
+$reqcomment-> execute(array($idjeu));
 
-while ($donnees = $req->fetch())
+
+while ($donnees = $reqcomment->fetch())
 {
 ?>
 
@@ -30,5 +42,14 @@ while ($donnees = $req->fetch())
 
 } 
 // end while for comment
-$req->closeCursor();
 ?>
+</div>
+<!--form to add message to chat-->
+<section class="">
+<form method="POST" action="" class="form-group"> 
+<label for="comment"><H2>Comment</H2></label>
+<input type="text" name="comment" class="form-control">
+<input class="btn btn-primary" type="submit" name="submit" value="Post">
+</form> 
+<div class="chat" id="chatBox"  >
+</section>

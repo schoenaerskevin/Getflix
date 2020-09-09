@@ -51,7 +51,7 @@
       ?>
       <?php   
        if ($droituser['droit']=="premium" || $droituser['droit']=="admin"){
-        echo '<a class="btn btn-outline-primary pull-right" href="chat.php" role="button">Chat</a>';
+        echo '<a class="btn btn-outline-primary pull-right" href="premium.php" role="button">Premium</a>';
         }
       if ($droituser['droit']){
         echo ' <a class="m-2 btn btn-outline-primary" href="deconnexion.php" role="button">Log Out</a>';
