@@ -21,13 +21,13 @@ if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
    }
    if(isset($_GET['supprime']) AND !empty($_GET['supprime'])) {
       $supprime = (int) $_GET['supprime'];
-      $req = $bdd->prepare('DELETE FROM chat WHERE id = ?');
+      $req = $bdd->prepare('DELETE FROM comment WHERE id = ?');
       $req->execute(array($supprime));
    }
 }
 //requete pour afficher les  membres et messages
 $membres = $bdd->query('SELECT * FROM user ORDER BY id ');
-$commentaires = $bdd->query('SELECT * FROM chat ORDER BY id ');
+$commentaires = $bdd->query('SELECT * FROM comment ORDER BY id ');
 $jeux = $bdd->query('SELECT * FROM games ORDER BY nom ');
 
 ?>
@@ -35,11 +35,15 @@ $jeux = $bdd->query('SELECT * FROM games ORDER BY nom ');
 <?php 
 include 'intro.php';
 include 'menu.php';?>
+
+<h1><u>PROFILES IN DATABASE</u></h1>
 <ul>
       <?php while($m = $membres->fetch()) { ?>
       <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Delete</a></li>
       <?php } ?>
    </ul>
+
+<h1><u>COMMENTS</u></h1>
    <p></p>
    <ul>
       <?php while($c = $commentaires->fetch()) { ?>
@@ -56,7 +60,7 @@ include 'menu.php';?>
     <?php 
        include 'addgames.php';
       ?> 
-       
+       <br><br>
        </ul>
     <?php
    
@@ -67,7 +71,7 @@ include 'menu.php';?>
         }
         
    echo '</select>';
-   echo '<INPUT TYPE="submit"  VALUE=" supprimer ">';
+   echo '<INPUT TYPE="submit" class="btn-danger" VALUE=" delete ">';
    echo '</form>';
   
 

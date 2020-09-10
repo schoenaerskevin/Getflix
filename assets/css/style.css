@@ -21,8 +21,17 @@ html {
     padding: 0;
     height: 100%;
     background-color: #212428 !important;
+    position:relative;
 
 }
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px; /* height of your footer */
+   }
+   
 .user_card {
     height: 400px;
     width: 350px;
@@ -96,11 +105,12 @@ html {
 
 
 .footer {
-    position: relative;
-    margin-top: -150px; /* negative value of footer height */
-    height: 150px;
-    clear:both;
-    padding-top:20px;
-    color:white;
-  } 
+    position: absolute;
+bottom:0;
+width:100%;
+  }
+
+  #sticky-footer {
+    flex-shrink: none;
+  }
 
