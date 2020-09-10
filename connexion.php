@@ -1,5 +1,4 @@
 <?php
-include 'dbreq.php';
  //verifie que mail et mdp correspondent a une entree de la bdd
 if(isset($_POST['formconnexion'])) {
    $mailconnect = htmlspecialchars($_POST['mailconnect']);
@@ -16,7 +15,7 @@ if(isset($_POST['formconnexion'])) {
          $_SESSION['id'] = $userinfo['id'];
          $_SESSION['pseudo'] = $userinfo['pseudo'];
          $_SESSION['mail'] = $userinfo['mail'];
-         header("Location: home.php");
+         header('Location: home.php');
       } else {
          //Renvoie erreur 
          $erreur = "Mauvais mail ou mot de passe !";
