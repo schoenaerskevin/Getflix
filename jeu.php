@@ -1,4 +1,5 @@
-<?php
+    
+    <?php
 include 'dbreq.php';
 //requête du droit de l'user
 $droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
@@ -13,13 +14,14 @@ if(isset($_GET['id'])) {
 
 ?>
 
+
 <?php
   include 'intro.php';
       include 'menu.php';
 ?>
-<div class="container">
+<div style ="color:white" class="container">
   <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 responsive">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 responsive"><br>
         <H2 class="font-weight-bold"><u><?php echo $jeuinfo['nom']; ?></u></H2>
         <div>
             
@@ -49,7 +51,7 @@ if(isset($_GET['id'])) {
   <br>
   <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <H4 class="font-weight-bold"><u>Genre:</u></h4>
+        <H4 class="font-weight-"><u>Genre:</u></h4>
         <p><?php echo $jeuinfo['genre']; ?></p>
         <H4 class="font-weight-bold"><u>Platforms:</u></h4>
         <p ><?php echo $jeuinfo['plateforme']; ?></p>
@@ -63,7 +65,6 @@ if(isset($_GET['id'])) {
       </div>
   </div>
 </div>
-
 <?php   
 }
 ?>
@@ -71,3 +72,6 @@ if(isset($_GET['id'])) {
   include 'comment.php';
   include 'outro.php';
 	  ?>    
+
+
+
