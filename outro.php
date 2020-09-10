@@ -1,7 +1,7 @@
 
-<footer class=" page-footer font-small special-color-dark">
+<footer class="footer sticky-footer page-footer font-small special-color-dark">
         
-        <div class="footer-copyright py-2 text-center">© 2020 Copyright:
+        <div class="container footer-copyright py-2 text-center">© 2020 Copyright:
         <a href="home.php"> Streamler </a>
         <span> - </span>
         <a href="terms.php"> Terms & Conditions</a>

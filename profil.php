@@ -47,4 +47,6 @@ include 'menu.php';
       </div>
 <?php   
 }
+include 'outro.php'
 ?>
+

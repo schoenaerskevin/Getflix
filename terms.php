@@ -6,7 +6,7 @@ $droituser = $droit-> fetch();
     include 'intro.php';
     include 'menu.php';
     ?>
-    <h1>Terms and usages</h1>
+    <h1>Terms & Conditions</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a varius orci, vel feugiat purus. Duis placerat vulputate dolor laoreet lacinia. Pellentesque a orci nec purus porttitor commodo. Aliquam id neque euismod, congue mauris ac, congue felis. Cras vel mi sollicitudin, consectetur felis et, euismod arcu. 
     Nulla malesuada arcu vel nisl condimentum malesuada. Nulla vulputate ante condimentum magna volutpat, ac blandit lorem tempus. Praesent molestie augue nec felis ullamcorper, ac euismod augue pretium. Morbi nibh elit, bibendum eget maximus eu, feugiat a leo. Duis sit amet ex quis tellus aliquet viverra.</p>
     <p>Morbi sed magna aliquet, viverra mi in, rutrum justo. Quisque tristique quis nulla vel elementum. Suspendisse sit amet ante vestibulum, feugiat nisi id, sollicitudin neque. Fusce dolor magna, aliquam at mauris in, venenatis convallis erat. Morbi at lorem porta, placerat ipsum sed, consectetur sapien. Fusce ut mollis ex. Aenean fermentum consequat tortor id ornare. 

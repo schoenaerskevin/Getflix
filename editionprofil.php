@@ -36,19 +36,19 @@ if(isset($_SESSION['id'])) {
 include 'intro.php';
 include 'menu.php';
 ?>
-      <div align="center">
-         <h2>My profile</h2>
-         <div align="left">
+      <div align="center"><br><br>
+         <h2><u>PROFILE EDITION</u></h2>
+         <div align="center">
             <form method="POST" action="" enctype="multipart/form-data">
-               <label>Pseudo :</label>
+               <label>Username :</label> <br>
                <input type="text" name="newpseudo" placeholder="Pseudo" value="<?php echo $user['pseudo']; ?>" /><br /><br />
-               <label>Mail :</label>
+               <label>Email :</label> <br>
                <input type="text" name="newmail" placeholder="Mail" value="<?php echo $user['mail']; ?>" /><br /><br />
-               <label>Password :</label>
+               <label>Password :</label> <br>
                <input type="password" name="newmdp1" placeholder="Password"/><br /><br />
-               <label>Confirm password :</label>
+               <label>Confirm password :</label> <br>
                <input type="password" name="newmdp2" placeholder="Confirm password" /><br /><br />
-               <input type="submit" value="Update my profile !" />
+               <input class ="btn-danger" type="submit" value="Update my profile !" />
             </form>
             <?php if(isset($msg)) { echo $msg; } ?>
          </div>
