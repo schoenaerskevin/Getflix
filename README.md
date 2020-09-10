@@ -1,6 +1,6 @@
 # Streamler
-![](https://img.shields.io/badge/code-WIP-yellow)
-![](https://img.shields.io/badge/chat-refresh%20fail-orange)
+![](https://img.shields.io/badge/code-passing-green)
+![](https://img.shields.io/badge/version-1.0-green)
 ![](https://img.shields.io/badge/Company-Becode-blue)
 
 
@@ -19,25 +19,25 @@ lien vers le repo énoncé du challenge : [içi](https://github.com/becodeorg/BX
 + HTML5
 + CSS3  
 + JS
-+ PHP, Mysql
++ PHP, MySQL
 + Bootstrap4
 
 ## Responsive
 
-Déjà inclus dans les fichiers de base.
+Déjà inclus dans le framework Bootstrap.
 
 ## Team
 
-Réalisation :En equipe de 4 
- membre de la team (et lien vers la page perso de chaque membre)  
+Réalisation :En equipe de 4.  
+
 + Laurent Lonchay : https://github.com/LaurentLonchay  
-+ Sebastien Meunier : https://github.com/MeunierS/  
++ Sébastien Meunier : https://github.com/MeunierS/  
 + Olivier Peeters : https://github.com/OlivierPeeters73  
 + Kevin Schoenaers : https://github.com/schoenaerskevin
 
 ## Liens vers la page  
 
-[Içi](http://streamler.orgfree.com/index.php)  
+[Içi](http://streamler.epizy.com/index.php)  
 
 ## Progression
 
@@ -45,7 +45,7 @@ Début : 24/08/2020
 
 Béta : 01/09/2020  
 
-v1.0 :   
+v1.0 : 10/09/2020
 
 ## Historique
 
@@ -58,17 +58,26 @@ v1.0 :
 + 01/09/2020 : mise en place des pages de filtres, mise en place de la barre de recherche, inversion des boutons log in/log out en fonction du status de connexion, formatage du code PHP.
 + 02/09/2020 : mise en beauté du site, uniformisation du PDO, modification du chat, début de la mise en place de la récupération de mot de passe.
 + 03/09/2020 : mise en ligne du chat, test de celui-çi, problème de refresh détecté, refonte graphique du site en cours.
++ 04/09/2020 : début de refonte graphique complète du site, partie admin.
++ 08/09/2020 : changement d'hébergeur.
++ 09/09/2020 : transformation de la partie chat en partie commentaires déplacé sur la partie jeu.
++ 10/09/2020 : merge final sur nv design et correction bug.
 
 ## Poste occupé durant la Réalisation
 
 **Junior Web Dev chez Becode**
+
 + Laurent : Codeur
 + Olivier :  Codeur
-+ Sebastien : Project Manager & Codeur
++ Sébastien : Project Manager & Codeur
 + Kevin : Git master via pull request & Codeur
+
+## Screenshots
+
+![screenshot1](assets/img/screenshot1.png) 
+![screenshot2](assets/img/screenshot2.png) 
 
 ## Credits
 
 [badges](https://shields.io/)  
 [IGBD](https://www.igdb.com)
-
