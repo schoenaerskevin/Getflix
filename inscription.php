@@ -8,8 +8,7 @@ if(isset($_POST['forminscription'])) {
    $mdp = sha1($_POST['mdp']);
    $mdp2 = sha1($_POST['mdp2']);
    $droit = htmlspecialchars($_POST['droit']);
-   var_dump($mdp);
-   
+
    
    if(!empty($_POST['pseudo']) && !empty($_POST['mail']) && !empty($_POST['mail2']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])&& !empty($_POST['droit']) ) {
       $pseudolength = strlen($pseudo);
@@ -119,7 +118,7 @@ if(isset($_POST['forminscription'])) {
                      <input type="password"    class="form-control input_user" placeholder="Password Confirmation" id="mdp2" name="mdp2" />
                   </div>
                   
-                  <div align="center">
+                  <div style="color:black" align="center">
                   <input type="radio" name="droit" value="free"> Free
                   <input type="radio" name="droit" value="premium"> Premium
                   </div>
@@ -129,16 +128,19 @@ if(isset($_POST['forminscription'])) {
                         <button type="submit" name="forminscription" class="btn login_btn">Submit</button>
                       </div>
                       <div class="mt-1">
-					<div class="d-flex justify-content-center links">
-						Already have an account? <a href="index.php" class="ml-2">Sign In</a>
-					</div>
-				</div>
-               </form>
-               <?php
+					<div style="color:black" class="d-flex justify-content-center links">
+                  Already have an account? <a href="index.php" class="ml-2">Sign In</a>
+                  
+               </div>
+  
+            </div>
+            <div class="text-center" >
+						<?php
          if(isset($erreur)) {
             echo '<font color="red">'.$erreur."</font>";
          }
          ?>
+               </form>
 				</div>
 		
 			</div>

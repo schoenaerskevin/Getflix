@@ -1,4 +1,6 @@
-
+hr {
+    border-top:5px white;
+}
 .logo{
     color:white;
 
@@ -12,17 +14,24 @@
     width:100%;
 }
 
-footer{
-    color:white;
-}
+
 body,
 html {
     margin: 0;
     padding: 0;
     height: 100%;
     background-color: #212428 !important;
+    position:relative;
 
 }
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px; /* height of your footer */
+   }
+   
 .user_card {
     height: 400px;
     width: 350px;
@@ -90,17 +99,18 @@ html {
     margin-top:20%
 }
 
-.copyright{
-
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-  }
-
 .linkto{
     color:white;
 }
 
+
+.footer {
+    position: absolute;
+bottom:0;
+width:100%;
+  }
+
+  #sticky-footer {
+    flex-shrink: none;
+  }
 

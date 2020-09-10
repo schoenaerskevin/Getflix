@@ -57,8 +57,7 @@
          ?>
          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 text-center">
                  <div class="img-container2">
-                 <a href='jeu.php?id=
-         <?php //add id to get the rigth jeu.php 
+                 <a href='jeu.php?id=<?php //add id to get the rigth jeu.php 
                  echo htmlspecialchars($donnees['id']);
          ?>'>
  
@@ -91,7 +90,7 @@
          ?>
          </div>
          </div>
-         <a href="filtre.php?plateforme=PS4" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
+         <a href="platefiltre.php?plateforme=PS4" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
  
  <hr>
 
@@ -116,8 +115,7 @@
          ?>
          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 text-center">
                  <div class="img-container2">
-                 <a href='jeu.php?id=
-         <?php //add id to get the rigth jeu.php 
+                 <a href='jeu.php?id=<?php //add id to get the rigth jeu.php 
                  echo htmlspecialchars($donnees['id']);
          ?>'>
  
@@ -175,8 +173,7 @@
          ?>
          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 text-center">
                  <div class="img-container2">
-                 <a href='jeu.php?id=
-         <?php //add id to get the rigth jeu.php 
+                 <a href='jeu.php?id=<?php //add id to get the rigth jeu.php 
                  echo htmlspecialchars($donnees['id']);
          ?>'>
  
@@ -238,8 +235,7 @@
          ?>
          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 text-center">
                  <div class="img-container2">
-                 <a href='jeu.php?id=
-         <?php //add id to get the rigth jeu.php 
+                 <a href='jeu.php?id=<?php //add id to get the rigth jeu.php 
                  echo htmlspecialchars($donnees['id']);
          ?>'>
  
@@ -272,7 +268,7 @@
          ?>
          </div>
          </div>
-         <a href="platefiltre.php?plateforme=Xbox" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
+         <a href="platefiltre.php?plateforme=PC" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
  
  <hr>
 
@@ -301,8 +297,7 @@
          ?>
          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 text-center">
                  <div class="img-container2">
-                 <a href='jeu.php?id=
-         <?php //add id to get the rigth jeu.php 
+                 <a href='jeu.php?id=<?php //add id to get the rigth jeu.php 
                  echo htmlspecialchars($donnees['id']);
          ?>'>
  
