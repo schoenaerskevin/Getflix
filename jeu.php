@@ -19,7 +19,7 @@ if(isset($_GET['id'])) {
 ?>
 <div class="container">
   <div class="row">
-      <div class="col-4  responsive">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 responsive">
         <H2 class="font-weight-bold"><u><?php echo $jeuinfo['nom']; ?></u></H2>
         <div>
             
@@ -37,7 +37,7 @@ if(isset($_GET['id'])) {
 
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
           <br> <br>
       <div class="embed-responsive embed-responsive-16by9">
       <iframe class="  border border-white rounded-lg embed-responsive-item " width="" height=""
@@ -48,7 +48,7 @@ if(isset($_GET['id'])) {
   </div>
   <br>
   <div class="row">
-      <div class="col-4">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <H4 class="font-weight-bold"><u>Genre:</u></h4>
         <p><?php echo $jeuinfo['genre']; ?></p>
         <H4 class="font-weight-bold"><u>Platforms:</u></h4>
@@ -56,7 +56,7 @@ if(isset($_GET['id'])) {
         <H4 class="font-weight-bold"><u>Date:</u></h4>
         <p><?php echo $jeuinfo['datesortie']; ?></p>
       </div>
-      <div class="col-8">
+      <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
         <h4 class="font-weight-bold"><u>Synopsis:</u></h4>
         <p><?php echo $jeuinfo['synopsis']; ?></p>
       
@@ -68,5 +68,6 @@ if(isset($_GET['id'])) {
 }
 ?>
 <?php
+  include 'comment.php';
   include 'outro.php';
 	  ?>    
