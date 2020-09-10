@@ -45,11 +45,11 @@ while ($donnees = $reqcomment->fetch())
 ?>
 </div>
 <!--form to add message to chat-->
-<section class="">
+<section class="sticky-bottom">
 <form method="POST" action="" class="form-group"> 
-<label for="comment"><H2>Comment</H2></label>
-<input type="text" name="comment" class="form-control">
-<input class="btn btn-primary" type="submit" name="submit" value="Post">
+    <input type="text" name="comment" style="height: 20%; width:100%; margin:0 auto;" class=" form-control" Placeholder="Write a comment...">
+    <input class="btn btn-danger" type="submit" name="submit" value="Post">
 </form> 
-<div class="chat" id="chatBox"  >
+
 </section>
+

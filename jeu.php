@@ -10,18 +10,18 @@ if(isset($_GET['id'])) {
   $reqjeu = $bdd->prepare('SELECT * FROM games WHERE id = ?');
   $reqjeu->execute(array($getid));
   $jeuinfo = $reqjeu->fetch();
-
 ?>
+
 
 
 <?php
   include 'intro.php';
-      include 'menu.php';
+  include 'menu.php';
 ?>
+<H2 class="font-weight-bold"><u><br><?php echo $jeuinfo['nom']; ?></u></H2>
 <div style ="color:white" class="container">
   <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 responsive"><br>
-        <H2 class="font-weight-bold"><u><?php echo $jeuinfo['nom']; ?></u></H2>
+      <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 responsive"><br>
         <div>
             
         <img class="m-2 border border-white rounded-lg responsive" src="
@@ -38,7 +38,7 @@ if(isset($_GET['id'])) {
 
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+      <div class="col-sm-12 col-md-10 col-lg-8 col-xl-8">
           <br> <br>
       <div class="embed-responsive embed-responsive-16by9">
       <iframe class="  border border-white rounded-lg embed-responsive-item " width="" height=""
@@ -60,6 +60,10 @@ if(isset($_GET['id'])) {
       <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
         <h4 class="font-weight-bold"><u>Synopsis:</u></h4>
         <p><?php echo $jeuinfo['synopsis']; ?></p>
+        <br>
+        <br>
+        <hr>
+        <br>
       
       </div>
   </div>
@@ -67,10 +71,11 @@ if(isset($_GET['id'])) {
 <?php   
 }
 ?>
+
 <?php
   include 'comment.php';
-  include 'outro.php';
-	  ?>    
+  include 'outro.php'
+?> 
 
 
 
