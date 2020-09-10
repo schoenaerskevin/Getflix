@@ -19,9 +19,32 @@ if(isset($_GET['plateforme']) AND !empty($_GET['plateforme'])) {
    include 'intro.php';
         include 'menu.php';
 
- 	 ?>
-
-
+ 	
+        switch ($_GET['plateforme']) {
+                case ($_GET['plateforme'] == "PS4"):
+                    echo '<img src="assets/img/playstation.png" alt="playstation" height="100px"border="0">';
+                break;
+            
+                case ($_GET['plateforme'] == "Xbox"):
+                    echo '<img src="assets/img/xbox.png" alt="xbox" width="200px"border="0">';
+                break;
+            
+                case ($_GET['plateforme'] == "Switch"):
+                    echo '<img src="assets/img/nintendo.png" alt="nintendo" height="100px"border="0">';
+                break;
+            
+                case ($_GET['plateforme'] == "PC"):
+                    echo '<img src="assets/img/windows.png" alt="windows" width="200px"border="0">';
+                break;
+                    
+                case ($_GET['plateforme'] == "Mac"):
+                    echo '<img src="assets/img/maclogo.png" alt="mac" height="100px"border="0">';
+                break;
+                default :
+                        echo "Error";
+                
+            }
+ ?>
           <div class="container-fluid">
 <div class="row">
  <!-- renvoie la page dynamique en fonction de la recherche -->
