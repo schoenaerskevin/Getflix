@@ -57,8 +57,7 @@
          ?>
          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 text-center">
                  <div class="img-container2">
-                 <a href='jeu.php?id=
-         <?php //add id to get the rigth jeu.php 
+                 <a href='jeu.php?id=<?php //add id to get the rigth jeu.php 
                  echo htmlspecialchars($donnees['id']);
          ?>'>
  

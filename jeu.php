@@ -1,5 +1,4 @@
-    
-    <?php
+<?php
 include 'dbreq.php';
 //requête du droit de l'user
 $droit = $bdd->prepare("SELECT * FROM user WHERE pseudo = ?");
