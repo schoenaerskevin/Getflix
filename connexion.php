@@ -38,7 +38,7 @@ if(isset($_POST['formconnexion'])) {
     </tr>
 </table>
 
-		<div class="container h-100">
+		<div class="container h-100" style="color:black">
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
@@ -67,11 +67,6 @@ if(isset($_POST['formconnexion'])) {
 				 	<button type="submit" name="formconnexion" class="btn login_btn">Login</button>
 				   </div>
                </form>
-               <?php
-         if(isset($erreur)) {
-            echo '<font color="red">'.$erreur."</font>";
-         }
-         ?>
 				</div>
 		
 				<div class="mt-4">
@@ -81,6 +76,14 @@ if(isset($_POST['formconnexion'])) {
 					<div class="d-flex justify-content-center links">
 						<a href="recuperation.php">Forgot your password?</a>
 					</div>
+					<div class="text-center" >
+						<br><?php
+         if(isset($erreur)) {
+            echo '<font color="red">'.$erreur."</font>";
+         }
+         ?>
+					</div>
+					
 				</div>
 			</div>
 		</div>

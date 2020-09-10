@@ -21,75 +21,60 @@ if(!empty($_POST['nom']) && !empty($_POST['genre']) && !empty($_POST['plateforme
  
 }     
 ?> 
-      
-      <div align="center">
+
+<div class="float-left">
+<h1><u>ADD GAMES</u></h1>
          <p></p>
-         
          <form method="POST" action="">
             <table>
                <tr>
-               
-                  <td align="right">
-                     <label for="nom">name :</label>
-                  </td>
                   <td>
-                     <input type="text" placeholder="game name" id="nom" name="nom" value="<?php if(isset($nom)) { echo $nom; } ?>" />
+                     Name: <br>
+                     <input type="text"  Placeholder="..." id="nom" name="nom" value="<?php if(isset($nom)) { echo $nom; } ?>" />
                   </td>
                </tr>
                <tr>
-                  <td align="right">
-                     <label for="genre">genre :</label>
-                  </td>
                   <td>
-                     <input type="text" placeholder="genre" id="genre" name="genre" value="<?php if(isset($genre)) { echo $genre; } ?>" />
+                     Genre: <br>
+                     <input type="text"  Placeholder="..." id="genre" name="genre" value="<?php if(isset($genre)) { echo $genre; } ?>" />
                   </td>
                </tr>
                <tr>
-                  <td align="right">
-                     <label for="plateforme">platform :</label>
-                  </td>
                   <td>
-                     <input type="text" placeholder="platform" id="plateforme" name="plateforme" value="<?php if(isset($plateforme)) { echo $plateforme; } ?>" />
+                     Platforms: <br>
+                     <input type="text"  Placeholder="Platforms" id="plateforme" name="plateforme" value="<?php if(isset($plateforme)) { echo $plateforme; } ?>" />
                   </td>
                </tr>
                <tr>
-                  <td align="right">
-                     <label for="datesortie">release date :</label>
-                  </td>
                   <td>
-                     <input type="date" placeholder="datesortie" id="datesortie" name="datesortie"value="<?php if(isset($datessortie)) { echo $datessortie; } ?>" />
+                     Release Date: <br>
+                     <input type="date"  Placeholder="datesortie" id="datesortie" name="datesortie"value="<?php if(isset($datessortie)) { echo $datessortie; } ?>" />
                   </td>
                </tr>
                <tr>
-                  <td align="right">
-                     <label for="trailer">url trailer :</label>
-                  </td>
                   <td>
-                     <input type="text" placeholder="url trailer" id="trailer" name="trailer" value="<?php if(isset($trailer)) { echo $trailer; } ?>" />
+                     Trailer's URL: <br>
+                     <input type="text"  Placeholder="Trailer URL" id="trailer" name="trailer" value="<?php if(isset($trailer)) { echo $trailer; } ?>" />
                   </td>
                </tr>
                <tr>
-                <td align="right">
-                     <label for="cover">cover :</label>
-                  </td>
                   <td>
-                     <input type="file" placeholder="cover" id="cover" name="cover" accept="image/jpeg" value="<?php if(isset($cover)) { echo $cover; } ?>" />
+                     Cover: <br>
+                     <input type="file"  Placeholder="cover" id="cover" name="cover" accept="image/jpeg" value="<?php if(isset($cover)) { echo $cover; } ?>" />
                   </td>
                </tr> 
                <tr>
-               <td align="right">
-                     <label for="synopsis">synopsis :</label>
-                  </td>
                   <td>
-                     <input type="text" placeholder="synopsis" id="synopsis" name="synopsis" value="<?php if(isset($synopsis)) { echo $synopsis; } ?>" />
+                     Synopsis: <br>
+                     <input type="text"  Placeholder="Synopsis" id="synopsis" name="synopsis" value="<?php if(isset($synopsis)) { echo $synopsis; } ?>" />
                   </td>
                   <tr>
-                  <td></td>
-                  <td align="center">
-                    <p></p>
-                     <input type="submit" name="formaddgames" value="Add the game" />
+                  <td> <br>
+                  <input class="btn-danger" type="submit" name="formaddgames" value="Add the game" />
+                  </td>                     
                   </td>
                </tr>
             </table>   
          </form>   
-      </div>
+</div>
+         

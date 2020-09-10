@@ -1,9 +1,12 @@
 
-<footer class="page-footer font-small special-color-dark">
+<footer class=" page-footer font-small special-color-dark">
         
         <div class="footer-copyright py-2 text-center">© 2020 Copyright:
-        <p><a href="home.php"> streamler.com</a></p>
-        <p><a href="terms.php"> Terms and usages</a></p>
+        <a href="home.php"> Streamler </a>
+        <span> - </span>
+        <a href="terms.php"> Terms & Conditions</a>
+        <span> - </span>
+        <a href="newsletter.php">Newsletter</a>
         </div>
 </footer>
 
