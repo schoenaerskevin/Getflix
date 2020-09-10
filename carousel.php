@@ -36,7 +36,7 @@
         </style>
 </head>
 <body>
- <a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/playstation.png" alt="playstation" height="100px"border="0"></a>
+ <a href="platefiltre.php?plateforme=PS4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/playstation.png" alt="playstation" height="100px"border="0"></a>
          
          <?php
          include 'dbreq.php';
@@ -57,7 +57,8 @@
          ?>
          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 text-center">
                  <div class="img-container2">
-                 <a href='jeu.php?id=<?php //add id to get the rigth jeu.php 
+                 <a href='jeu.php?id=
+         <?php //add id to get the rigth jeu.php 
                  echo htmlspecialchars($donnees['id']);
          ?>'>
  
@@ -90,11 +91,11 @@
          ?>
          </div>
          </div>
-         <a href="#link" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
+         <a href="filtre.php?plateforme=PS4" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
  
  <hr>
 
-<a href=""><img src="assets/img/xbox.png" alt="xbox" width="200px"border="0"></a>
+<a href="platefiltre.php?plateforme=Xbox"><img src="assets/img/xbox.png" alt="xbox" width="200px"border="0"></a>
         
         <?php
         include 'dbreq.php';
@@ -149,12 +150,12 @@
          ?>
          </div>
          </div>
-         <a href="#link" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
+         <a href="platefiltre.php?plateforme=Xbox" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
  
  <hr>
 
 <br>
-<a href="">&nbsp;&nbsp;&nbsp;<img src="assets/img/nintendo.png" alt="nintendo" height="100px"border="0"></a>        
+<a href="platefiltre.php?plateforme=Switch">&nbsp;&nbsp;&nbsp;<img src="assets/img/nintendo.png" alt="nintendo" height="100px"border="0"></a>        
         <?php
         include 'dbreq.php';
         //requête du droit de l'user
@@ -208,7 +209,7 @@
          ?>
          </div>
          </div>
-         <a href="#link" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
+         <a href="platefiltre.php?plateforme=Switch" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
  
  <hr>
 
@@ -216,7 +217,7 @@
 
 <article>
 <br>
-<a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/windows.png" alt="windows" width="200px"border="0"></a>
+<a href="platefiltre.php?plateforme=PC">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/windows.png" alt="windows" width="200px"border="0"></a>
         
         <?php
         include 'dbreq.php';
@@ -271,7 +272,7 @@
          ?>
          </div>
          </div>
-         <a href="#link" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
+         <a href="platefiltre.php?plateforme=Xbox" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
  
  <hr>
 
@@ -279,7 +280,7 @@
 
 <article>
 <br>
-<a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/maclogo.png" alt="mac" height="100px"border="0"></a>
+<a href="platefiltre.php?plateforme=Mac">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/maclogo.png" alt="mac" height="100px"border="0"></a>
         
         <?php
         include 'dbreq.php';
@@ -334,7 +335,7 @@
          ?>
          </div>
          </div>
-         <a href="#link" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
+         <a href="platefiltre.php?plateforme=Mac" style="color:white;" class="linkto float-right" role="button">Click Here for More...</a>
  
  <hr>
 
