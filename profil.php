@@ -13,7 +13,7 @@ include 'intro.php';
 include 'menu.php';
 ?>
       <div align="center">
-         <h2>Profil de <?php echo $userinfo['pseudo']; ?></h2>
+         <h2>Profile of <?php echo $userinfo['pseudo']; ?></h2>
          <br /><br />
          Pseudo = <?php echo $userinfo['pseudo']; ?>
          <br />
@@ -23,10 +23,11 @@ include 'menu.php';
          if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id']) {
          ?>
          <br />
-         <a href="editionprofil.php">Editer mon profil</a>
-         <a href="deconnexion.php">Se déconnecter</a>
+         <a href="editionprofil.php">Edit my profile</a>
+         <p></p>
+         <a href="deconnexion.php">Log out</a>
        <p></p>
-       <?= $userinfo['pseudo'] ?>- <a href="delherprofil.php?id=<?= $_SESSION['id'] ?>">Supprimer</a>
+       <?= $userinfo['pseudo'] ?>- <a href="delherprofil.php?id=<?= $_SESSION['id'] ?>">Delete</a>
       <?php } ?>
       <p></p>
          <a href="index.php">menu</a>
