@@ -61,82 +61,90 @@ if(isset($_POST['forminscription'])) {
 
 ?>
 
-<?php 
-include 'intro.php';
-include 'menu.php';
-?>
-   <!-- formulaire inscription avec pseudo,mail,mdp et type de compte via formulaire-->
-      <div align="center">
-         <h2>Inscription</h2>
-         <br /><br />
-         <form method="POST" action="">
-            <table>
-               <tr>
-               
-                  <td align="right">
-                     <label for="pseudo">Pseudo :</label>
-                  </td>
-                  <td>
-                     <input type="text" placeholder="Votre pseudo" id="pseudo" name="pseudo" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>" />
-                  </td>
-               </tr>
-               <tr>
-                  <td align="right">
-                     <label for="mail">Mail :</label>
-                  </td>
-                  <td>
-                     <input type="email" placeholder="Votre mail" id="mail" name="mail" value="<?php if(isset($mail)) { echo $mail; } ?>" />
-                  </td>
-               </tr>
-               <tr>
-                  <td align="right">
-                     <label for="mail2">Confirmation du mail :</label>
-                  </td>
-                  <td>
-                     <input type="email" placeholder="Confirmez votre mail" id="mail2" name="mail2" value="<?php if(isset($mail2)) { echo $mail2; } ?>" />
-                  </td>
-               </tr>
-               <tr>
-                  <td align="right">
-                     <label for="mdp">Mot de passe :</label>
-                  </td>
-                  <td>
-                     <input type="password" placeholder="Votre mot de passe" id="mdp" name="mdp" />
-                  </td>
-               </tr>
-               <tr>
-                  <td align="right">
-                     <label for="mdp2">Confirmation du mot de passe :</label>
-                  </td>
-                  <td>
-                     <input type="password" placeholder="Confirmez votre mdp" id="mdp2" name="mdp2" />
-                  </td>
-               </tr>
-               <tr>
-                  <td align="right">
-                     <label for="droit">type de compte :</label>
-                  </td>
-                  <td>
-                  <p><input type="radio" name="droit" value="free"> free</p>
-                  <p><input type="radio" name="droit" value="premium"> premium</p>
-                  </td>
-               </tr>
 
-               <tr>
-                  <td></td>
-                  <td align="center">
-                     <br />
-                     <input type="submit" name="forminscription" value="Je m'inscris" />
-                  </td>
-               </tr>
-            </table>
-         </form>
-         <?php
+<?php
+    include 'intro.php';
+?>    
+<table width="100%">
+    <tr>
+        <td id="tdlogo">
+            <a style="font-family: 'Londrina Shadow', cursive; font-size:3em" class="logo navbar-brand" href="index.php"><i class="fa fa-gamepad" style="font-size:1em"></i> <img src="https://fontmeme.com/permalink/200903/a5e3585f8b36c0d7384a137bc9d64a60.png" alt="netflix-font" border="0"> </a>        
+        </td>
+    </tr>
+</table>
+
+		<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="assets/img/helmet.png" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+               
+            <form method="POST" action="">
+						<div class="input-group mb-1">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+                     <input type="text" placeholder="Username" class="form-control input_user" id="pseudo" name="pseudo" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>" /> 
+                  </div>
+                  
+						<div class="input-group mb-1">
+							<div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+							</div>
+                     <input type="email" placeholder="Email"    class="form-control input_user" id="mail" name="mail" value="<?php if(isset($mail)) { echo $mail; } ?>" />
+                  </div>
+                  
+                  <div class="input-group mb-1">
+							<div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+							</div>
+                     <input type="email" placeholder="Email Confirmation" class="form-control input_user" id="mail2" name="mail2" value="<?php if(isset($mail2)) { echo $mail2; } ?>" />
+                  </div>
+
+                  <div class="input-group mb-1">
+							<div class="input-group-append">
+                     <span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+                     <input type="password"    class="form-control input_user" placeholder="Password" id="mdp" name="mdp" />
+						</div>
+
+                  <div class="input-group mb-1">
+							<div class="input-group-append">
+                     <span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+                     <input type="password"    class="form-control input_user" placeholder="Password Confirmation" id="mdp2" name="mdp2" />
+                  </div>
+                  
+                  <div align="center">
+                  <input type="radio" name="droit" value="free"> Free
+                  <input type="radio" name="droit" value="premium"> Premium
+                  </div>
+                  
+
+							<div class="d-flex justify-content-center login_container">
+                        <button type="submit" name="forminscription" class="btn login_btn">Submit</button>
+                      </div>
+                      <div class="mt-1">
+					<div class="d-flex justify-content-center links">
+						Already have an account? <a href="index.php" class="ml-2">Sign In</a>
+					</div>
+				</div>
+               </form>
+               <?php
          if(isset($erreur)) {
             echo '<font color="red">'.$erreur."</font>";
          }
          ?>
-      </div>
-      <?php
-include 'outro.php';
-?> 
+				</div>
+		
+			</div>
+		</div>
+   </div>
+   
+   <?php
+    include 'outro.php';
+?>    
