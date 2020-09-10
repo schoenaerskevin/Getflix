@@ -67,7 +67,7 @@ if(isset($_POST['recup_submit'],$_POST['recup_mail'])) {
                 </html>';
                 $recipients=$recup_mail;
                 sendmail($subject,$message,$recipients);
-
+                $envoi = true;
 
             } else {
                 $error = "Email address not registered";
@@ -80,6 +80,7 @@ if(isset($_POST['recup_submit'],$_POST['recup_mail'])) {
     }
 
 }
+
 
 //verification code processing
 if(isset($_POST['verif_submit'],$_POST['verif_code'])) {
@@ -198,7 +199,12 @@ if(isset($_POST['change_submit'])) {
                         </div>
                     </form>
 
-                    <?php } else { ?>
+                    <?php } 
+                    else if ($envoi) {
+                        echo '<p style = "color : black;"> <b>Mail sent</b></p>';
+                    }
+                    
+                    else { ?>
                     <form method="post">
                         <div class="input-group mb-3">
                             <div class="input-group-append">
