@@ -18,6 +18,7 @@ if(isset($_GET['genre']) AND !empty($_GET['genre'])) {
 <?php 
 include 'intro.php';
 include 'menu.php';
+echo '<h1> '. ucfirst($_GET['genre']) .'</h1>';
 ?>
 <div class="container-fluid">
 <div class="row">
@@ -46,6 +47,7 @@ include 'menu.php';
 
    <?php } 
    ?>
+   
    </div>
    </div>
    <?php
