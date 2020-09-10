@@ -14,4 +14,4 @@
     <link rel="stylesheet" href="assets/css/style.css">
  	<title>STREAMLER</title>
  </head>
- <body style="background-color: #212428 !important;"></body>
+ <body style="background-color: #212428 !important; color:white" ></body>
