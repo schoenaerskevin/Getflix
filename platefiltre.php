@@ -25,8 +25,7 @@ if(isset($_GET['plateforme']) AND !empty($_GET['plateforme'])) {
  <!-- renvoie la page dynamique en fonction de la recherche -->
 <?php while($donnees = $req->fetch()) { ?>
       
-      <a href='jeu.php?id=
-<?php //add id to get the rigth jeu.php 
+      <a href='jeu.php?id=<?php //add id to get the rigth jeu.php 
         echo htmlspecialchars($donnees['id']);
 ?>'>
 <img class= "m-2 border border-white rounded-lg" src="
