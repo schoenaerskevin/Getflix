@@ -21,10 +21,6 @@ if(!empty($_POST['nom']) && !empty($_POST['genre']) && !empty($_POST['plateforme
  
 }     
 ?> 
-
-
-
-
       
       <div align="center">
          <p></p>
