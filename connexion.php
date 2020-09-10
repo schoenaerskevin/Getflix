@@ -9,8 +9,10 @@ if(isset($_POST['formconnexion'])) {
       $requser1 = $bdd->prepare("SELECT * FROM mdp WHERE mdp = ? ");
       $requser1->execute(array( $mdpconnect));
       
+
       $userexist = $requser->rowCount();
       $mdpexist = $requser1->rowCount();
+
       if($userexist == 1 && $mdpexist==1) {
          $userinfo = $requser->fetch();
          $_SESSION['id'] = $userinfo['id'];
