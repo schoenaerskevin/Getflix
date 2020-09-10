@@ -10,7 +10,8 @@ if(isset($_POST['formconnexion'])) {
       $requser1->execute(array( $mdpconnect));
       
       $userexist = $requser->rowCount();
-      if($userexist == 1) {
+      $mdpexist = $requser1->rowCount();
+      if($userexist == 1 && $mdpexist==1) {
          $userinfo = $requser->fetch();
          $_SESSION['id'] = $userinfo['id'];
          $_SESSION['pseudo'] = $userinfo['pseudo'];
