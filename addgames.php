@@ -30,10 +30,10 @@ if(!empty($_POST['nom']) && !empty($_POST['genre']) && !empty($_POST['plateforme
                <tr>
                
                   <td align="right">
-                     <label for="nom">nom :</label>
+                     <label for="nom">name :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="nom du jeu" id="nom" name="nom" value="<?php if(isset($nom)) { echo $nom; } ?>" />
+                     <input type="text" placeholder="game name" id="nom" name="nom" value="<?php if(isset($nom)) { echo $nom; } ?>" />
                   </td>
                </tr>
                <tr>
@@ -46,15 +46,15 @@ if(!empty($_POST['nom']) && !empty($_POST['genre']) && !empty($_POST['plateforme
                </tr>
                <tr>
                   <td align="right">
-                     <label for="plateforme">plate-forme :</label>
+                     <label for="plateforme">platform :</label>
                   </td>
                   <td>
-                     <input type="text" placeholder="plateforme" id="plateforme" name="plateforme" value="<?php if(isset($plateforme)) { echo $plateforme; } ?>" />
+                     <input type="text" placeholder="platform" id="plateforme" name="plateforme" value="<?php if(isset($plateforme)) { echo $plateforme; } ?>" />
                   </td>
                </tr>
                <tr>
                   <td align="right">
-                     <label for="datesortie">date-sortie :</label>
+                     <label for="datesortie">release date :</label>
                   </td>
                   <td>
                      <input type="date" placeholder="datesortie" id="datesortie" name="datesortie"value="<?php if(isset($datessortie)) { echo $datessortie; } ?>" />

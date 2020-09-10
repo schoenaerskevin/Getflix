@@ -37,18 +37,18 @@ include 'intro.php';
 include 'menu.php';?>
 <ul>
       <?php while($m = $membres->fetch()) { ?>
-      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Supprimer</a></li>
+      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Delete</a></li>
       <?php } ?>
    </ul>
    <p></p>
    <ul>
       <?php while($c = $commentaires->fetch()) { ?>
-      <li><?= $c['pseudo'] ?> : <?= $c['comment'] ?> :   <a href="delchat.php?id=<?= $c['id'] ?>">Supprimer</a></li>
+      <li><?= $c['pseudo'] ?> : <?= $c['comment'] ?> :   <a href="delchat.php?id=<?= $c['id'] ?>">Delete</a></li>
       <?php } ?>
    </ul>
    <ul>
       <?php while($m = $membres->fetch()) { ?>
-      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Supprimer</a></li>
+      <li><?= $m['id'] ?> : <?= $m['pseudo'] ?>- <a href="delete.php?id=<?= $m['id'] ?>">Delete</a></li>
       <?php } ?>
    </ul>
    <ul>
@@ -67,7 +67,7 @@ include 'menu.php';?>
         }
         
    echo '</select>';
-   echo '<INPUT TYPE="submit"  VALUE=" supprimer ">';
+   echo '<INPUT TYPE="submit"  VALUE=" delete ">';
    echo '</form>';
   
 
